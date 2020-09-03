@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 03 sep. 2020 à 16:15
+-- Généré le :  jeu. 03 sep. 2020 à 16:29
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP :  7.4.1
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `1921sio`
 --
-CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `1921sio`;
 
 -- --------------------------------------------------------
@@ -67,22 +67,22 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantité`, `codepromo`, `lienimage`, `categorie`) VALUES
-(1, 'Borne noir', 'La borne noire qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/born2.png', 'borne'),
-(2, 'Borne rouge', 'La borne rouge qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/360x360-rose.png', 'borne'),
-(3, 'Borne basic bleu', 'La borne bleue qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornbleu.png', 'borne'),
-(4, 'borne basic rose', 'La borne rose qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornviolet.png', 'borne'),
-(5, 'Bornes basic blanche', 'La borne blanche qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornblanche.png', 'borne'),
-(6, 'Borne basic jaune', 'La borne jaune qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornjaune.png', 'borne'),
-(9, 'Lot de 200 photos', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10 ou 12.7x12.7.', 29.99, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/IMPRESSIONPHOTOACCEUIL.png', 'impression'),
-(10, 'Lot de 400 photos', 'Choptaphoto vous propose ce pack photos de 400 pièces, en dimension 10x10 ou 12.7x12.7.', 59.99, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/impression%20photo.jpg', 'impression'),
-(11, 'photos en illimité', 'Choptaphoto vous propose ce pack photos illimité, en dimension 10x10 ou 12.7x12.7.', 149.99, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/impression%20photo4.jpg', 'impression'),
-(12, 'Premium format 10', 'Choptaphoto vous propose ce type de format photos en dimension 10x10 ou 12.7x12.7.', 0.7, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/impression%20photo5.jpg', 'impression'),
-(13, 'Premium format 13', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10.', 1, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/impression-photo.png', 'impression'),
-(14, 'Format rétro', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 9.2×10.2 cm.', 1.5, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/impression%20photo6.jpg', 'impression'),
-(16, 'Borne personnalisable ', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un evénement ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornreseaux.png', 'borne'),
-(17, 'Borne anniversaire', 'Cette borne anniversaire qu\'on vous propose est une borne premium, elle est destinée aux particuliers qui souhaitent fêter leur jour d\'anniversaire et garder des milliers de souvenirs avec leurs invités ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornannivsilv.png', 'borne'),
-(18, 'borne pour entreprise', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un événement ! elle est personnalisable de la tête au pied !', 199.99, 1, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/bornefficom.png', 'borne'),
-(20, 'Poster', 'choisissez votre image au payement', 10, 10000, 'promo-2020', 'http://localhost/PPE/ChopTaPhoto-PPE2/img/posterr.png', 'impression');
+(1, 'Borne noir', 'La borne noire qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/born2.png', 'borne'),
+(2, 'Borne rouge', 'La borne rouge qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/360x360-rose.png', 'borne'),
+(3, 'Borne basic bleu', 'La borne bleue qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornbleu.png', 'borne'),
+(4, 'borne basic rose', 'La borne rose qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornviolet.png', 'borne'),
+(5, 'Bornes basic blanche', 'La borne blanche qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornblanche.png', 'borne'),
+(6, 'Borne basic jaune', 'La borne jaune qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornjaune.png', 'borne'),
+(9, 'Lot de 200 photos', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10 ou 12.7x12.7.', 29.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/IMPRESSIONPHOTOACCEUIL.png', 'impression'),
+(10, 'Lot de 400 photos', 'Choptaphoto vous propose ce pack photos de 400 pièces, en dimension 10x10 ou 12.7x12.7.', 59.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo.jpg', 'impression'),
+(11, 'photos en illimité', 'Choptaphoto vous propose ce pack photos illimité, en dimension 10x10 ou 12.7x12.7.', 149.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo4.jpg', 'impression'),
+(12, 'Premium format 10', 'Choptaphoto vous propose ce type de format photos en dimension 10x10 ou 12.7x12.7.', 0.7, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo5.jpg', 'impression'),
+(13, 'Premium format 13', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10.', 1, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression-photo.png', 'impression'),
+(14, 'Format rétro', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 9.2×10.2 cm.', 1.5, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo6.jpg', 'impression'),
+(16, 'Borne personnalisable ', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un evénement ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornreseaux.png', 'borne'),
+(17, 'Borne anniversaire', 'Cette borne anniversaire qu\'on vous propose est une borne premium, elle est destinée aux particuliers qui souhaitent fêter leur jour d\'anniversaire et garder des milliers de souvenirs avec leurs invités ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornannivsilv.png', 'borne'),
+(18, 'borne pour entreprise', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un événement ! elle est personnalisable de la tête au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornefficom.png', 'borne'),
+(20, 'Poster', 'choisissez votre image au payement', 10, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/posterr.png', 'impression');
 
 -- --------------------------------------------------------
 
