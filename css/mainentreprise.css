@@ -1,0 +1,303 @@
+/*********background et body*******/
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+}
+
+a {
+    color: white;
+}
+
+.aa {
+    color: white;
+}
+
+.aa:hover {
+    color: rgba(255,0,187,1.00);
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*********background et body*******/
+
+/*****************Alert********************/
+
+.alert {
+    padding: 1px;
+    border: 0;
+    border-radius: 0;
+    font-size: 15px;
+    color: white;
+    background: rgba(195,71,139,1.00);
+}
+
+.containeralert {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/*****************Alert********************/
+
+/****************Nav-bar banner******************/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+    border-radius: 0;
+    font-size: 15px;
+    font-size: 20px;
+    line-height: 50px;
+    background: black;
+}
+
+.navbar img {
+    width: 300px;
+    height: 70px;
+}
+
+.navbar a:hover svg {
+    animation: bounce 0.7s ease;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(1px);
+    }
+
+    to {
+        transform: translateY(-2.5px);
+    }
+}
+
+.left {
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.color {
+    padding: 10px;
+    color: white;
+}
+
+.color:hover {
+    color: rgba(255,0,187,1.00);
+    transition: 0.7s;
+}
+
+.right {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.right img {
+    width: 20px;
+    height: 20px;
+    margin: 14px;
+}
+
+/****************Nav-bar banner******************/
+
+/**************************bouton en bas du site*****************************/
+
+.boutondubas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #000;
+}
+
+.rights {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+
+
+.titreboutonbasdusite {
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    font-size: 23px;
+    color: rgba(195,71,139,1.00);
+}
+
+.aaaa {
+    font-size: 15px;
+    color: white;
+}
+
+.aaaa:hover {
+    color: pink;
+}
+
+.boutondubas aaaa:hover {
+    font-size: 13px;
+    color: pink;
+}
+
+.titreboutondubas svg {
+    color: white;
+}
+
+.boutondubas a:hover svg {
+    transform: scale(1.15);
+}
+
+.iconsresseaux {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.Apropos {
+    font-size: 20px;
+    color: rgba(195,71,139,1.00);
+}
+
+.ico {
+    color: red;
+}
+
+.btn {
+    border: 1px solid white;
+    background: black;
+}
+
+.btn:hover {
+    border: 1px solid rgba(195,71,139,1.00);
+    color: black;
+    background: rgba(195,71,139,1.00);
+}
+
+/**************************bouton en bas du site*****************************/
+
+/**image haut du site penchée**/
+
+.backgroundhautdusite {
+    display: flex;
+    margin-top: -20px;
+}
+
+/**image haut du site penchée**/
+
+/**image bas du site penchée**/
+
+.backgroundbasdusite {
+    display: flex;
+    margin-bottom: -5px;
+}
+
+/**image bas du site penchée**/
+
+/**********bouton contact**********/
+
+.bouton {
+    margin-top: 25px;
+    margin-left: 900px;
+}
+
+/**********bouton contact**********/
+
+/*************** container entreprise************/
+
+.containertexteentreprise {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.titreentreprise {
+    text-align: center;
+    font-size: 30px;
+    color: rgba(195,71,139,1.00);
+}
+
+.texteentreprise1 {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.texteentreprise2 {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 15px;
+}
+
+.imageentrerpise {
+    width: 100%;
+    margin-left: 20px;
+    max-width: 500px;
+    border: 1px solid #ADADAD;
+    border-radius: 25px;
+}
+
+.imageentrerpise2 {
+    width: 100%;
+    margin-right: 20px;
+    max-width: 500px;
+    border: 1px solid #ADADAD;
+    border-radius: 25px;
+}
+
+.societe {
+    width: 100%;
+    max-width: 500px;
+}
+
+.valeurs {
+    width: 100%;
+    max-width: 500px;
+}
+
+/***************************bouton haut de page******************************/
+
+a#cRetour {
+    z-index: 99999;
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    opacity: 1;
+    background: rgba(158,158,158,1.00);
+    transition: all ease-in 0.2s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+a#cRetour:before {
+    content: "\25b2";
+}
+
+a#cRetour:hover {
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+}
+
+a#cRetour.cInvisible {
+    bottom: -35px;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+a#cRetour.cVisible {
+    bottom: 20px;
+    opacity: 1;
+}
+
+/***************************bouton haut de page******************************/

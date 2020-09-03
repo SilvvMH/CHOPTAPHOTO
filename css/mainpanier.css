@@ -1,0 +1,446 @@
+/*********background et body*******/
+
+body, html {
+    height: 100%;
+  }
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+a {
+    color: white;
+}
+
+.aa {
+    color: white;
+}
+
+.aa:hover {
+    color: rgba(255,0,187,1.00);
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*********background et body*******/
+
+/************paniervide********/
+
+.panier {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.textpanier {
+    font-size: 11px;
+}
+
+.titrepanier {
+    margin-top: 25px;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+.h1 {
+    margin-left: 45px;
+    color: rgba(255,0,187,1.00);
+}
+
+.logopanier {
+    width: 5%;
+    height: 5%;
+    margin-left: 15px;
+}
+
+/************paniervide********/
+
+/********************container********************/
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+    color: black;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    color: black;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+}
+
+.container4 p:hover svg {
+    animation: rotating 0.7s ease;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.icons {
+    font-size: 40px;
+}
+
+.icons2 {
+    margin-left: 40px;
+    font-size: 60px;
+    color: rgba(255,0,187,1.00);
+}
+
+.textbannerpanier {
+    margin-top: 19px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/********************container********************/
+
+/****bouton panier****/
+
+.boutonpanier {
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.btn {
+    margin-left: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 1px solid black;
+    font-size: 13px;
+    background: black;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    color: black;
+    background: rgba(195,71,139,1.00);
+}
+
+/*****************Alert********************/
+
+.alert {
+    padding: 1px;
+    border: 0;
+    border-radius: 0;
+    font-size: 15px;
+    color: white;
+    background: rgba(195,71,139,1.00);
+}
+
+.containeralert {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/*****************Alert********************/
+
+/****************Nav-bar banner******************/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+    border-radius: 0;
+    font-size: 15px;
+    font-size: 20px;
+    line-height: 50px;
+    background: black;
+}
+
+.navbar img {
+    width: 300px;
+    height: 70px;
+}
+
+.navbar a:hover svg {
+    animation: bounce 0.7s ease;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(1px);
+    }
+
+    to {
+        transform: translateY(-2.5px);
+    }
+}
+
+.left {
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.color {
+    padding: 10px;
+    color: white;
+}
+
+.color:hover {
+    color: rgba(255,0,187,1.00);
+    transition: 0.7s;
+}
+
+.right {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.right img {
+    width: 20px;
+    height: 20px;
+    margin: 14px;
+}
+
+/****************Nav-bar banner******************/
+
+/**************************bouton en bas du site*****************************/
+
+.boutondubas {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+.footerfont{
+    color: white;
+}
+.rights {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+
+.titreboutonbasdusite {
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    font-size: 23px;
+    color: rgba(195,71,139,1.00);
+}
+
+.aaaa {
+    font-size: 15px;
+    color: white;
+}
+
+.aaaa:hover {
+    color: pink;
+}
+
+.boutondubas aaaa:hover {
+    font-size: 13px;
+    color: pink;
+}
+
+.titreboutondubas svg {
+    color: white;
+}
+
+.boutondubas a:hover svg {
+    transform: scale(1.15);
+}
+
+.iconsresseaux {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.Apropos {
+    font-size: 20px;
+    color: rgba(195,71,139,1.00);
+}
+
+.ico {
+    color: red;
+}
+
+/**************************bouton en bas du site*****************************/
+
+/**image haut du site penchée**/
+
+.backgroundhautdusite {
+    display: flex;
+    margin-top: -20px;
+}
+
+/**image haut du site penchée**/
+
+/**image bas du site penchée**/
+
+.backgroundbasdusite {
+    display: flex;
+    margin-bottom: -5px;
+}
+
+/**image bas du site penchée**/
+
+/**********bouton contact**********/
+
+.bouton {
+    margin-top: 25px;
+    margin-left: 900px;
+}
+
+/**********bouton contact**********/
+
+/***************************bouton haut de page******************************/
+
+a#cRetour {
+    z-index: 99999;
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    opacity: 1;
+    background: rgba(0,0,0,0.3);
+    transition: all ease-in 0.2s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+a#cRetour:before {
+    content: "\25b2";
+}
+
+a#cRetour:hover {
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+}
+
+a#cRetour.cInvisible {
+    bottom: -35px;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+a#cRetour.cVisible {
+    bottom: 20px;
+    opacity: 1;
+}
+
+/***************************bouton haut de page******************************/
+
+
+/* tableau card */
+
+.produit {
+    display: flex;
+    font-family : 'Yanone Kaffeesatz',sans-serif;
+    justify-content: center;
+}
+.image {
+    margin: 30px 50px 50px 50px;
+    border: solid gray 1px;
+}
+.image img{
+    width: 200px;
+}
+.info {
+    padding: 30px 0 0 50px;
+    width: 500px;
+}
+
+.linkpageprod{
+    margin-top:-37px;
+    display: flex;
+    float: right;
+}
+.prix{
+    margin-top: 20px;
+    color : red;
+}
+.stock{
+    margin-top: 0px;
+    color : rgb(0, 206, 34);
+    display: flex;
+    float: right;
+}
+.interaction img {
+    width: 25px;
+}
+.interaction h5 {
+    font-size: 20px;
+    border: solid rgb(0, 0, 0) 2px;
+    height: 30px;
+    width: 30px;
+    padding: 1px 3px 0px 3px;
+    margin: 0;
+    text-align: center;
+}
+
+.interaction {
+    width: 250px;
+}
+.qtt {
+    display: flex;
+    justify-content: center;
+    margin-top:70px;
+}
+.qtt a {
+    height: 30px;
+    padding: 3px 3px 0px 3px;
+}
+.delete a{
+    height: 30px;
+    padding: 10px 3px 0px 3px;
+    margin: 0px 0 0 72px;
+}
+.delete {
+    margin-top: 20px;
+}
+a {color: black;}

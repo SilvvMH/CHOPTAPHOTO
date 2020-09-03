@@ -1,0 +1,452 @@
+/******************Body*****************/
+body {
+	overflow-x: hidden;
+}
+.backgroundhautdusite {
+	background-image: url("../img/FOND-NOIR-PENCHE.png");
+	margin-top: -20px;
+}
+
+/**image bas du site penchée**/
+
+.backgroundbasdusite {
+	display: flex;
+	margin-top: 60px;
+	margin-bottom: -5px;
+}
+/**image bas du site penchée**/
+
+a:hover {
+	text-decoration: none;
+	color: pink;
+}
+
+a {
+	color: pink;
+}
+
+/******************Body*****************/
+
+
+/*****************Alert********************/
+
+.alert {
+    padding : 1px;
+    border : 0;
+    border-radius : 0;
+    font-size : 15px;
+    color : rgb(255,255,255);
+    background : rgba(195,71,139,1.00);
+}
+
+.containeralert {
+    display : flex;
+    justify-content : space-around;
+    margin-top : 10px;
+    font-weight : 400;
+}
+
+/*****************Alert********************/
+
+/****************Nav-bar banner******************/
+
+.navbar {
+    display : flex;
+    justify-content : space-between;
+    width : 100%;
+    margin-top : -20px;
+    border-radius : 0;
+    font-size : 20px;
+    line-height : 50px;
+    background : rgb(0,0,0);
+}
+
+.navbar img {
+    width : 100%;
+    height : 70px;
+    max-width : 300px;
+}
+
+.navbar a:hover svg {
+    animation : bounce 0.7s ease infinite;
+}
+
+@keyframes bounce {
+    from {
+        transform : translateY(1px);
+    }
+
+    to {
+        transform : translateY(-2.5px);
+    }
+}
+
+.left {
+    margin-top : 10px;
+    margin-left : 0;
+}
+
+.color {
+    padding : 10px;
+    color : rgb(255,255,255);
+}
+
+.color:hover {
+    color : rgba(255,0,187,1.00);
+    transition : 0.7s;
+}
+
+.right {
+    margin-top : 10px;
+    margin-right : 10px;
+}
+
+.right img {
+    width : 100%;
+    height : 20px;
+    margin : 14px;
+    max-width : 20px;
+}
+
+/****************Nav-bar banner******************/
+
+
+/***************bouton********************/
+
+.btn {
+	background-color:black;
+	border: 0;
+	color: white;
+	border: 1px solid white;
+	align-items: center;
+}
+
+.btn:hover {
+	background-color: #FFDD00;
+	color:black;
+	border: 1px solid black;
+}
+
+.containerboutoncommander {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 25px;
+	align-items: center;
+}
+
+/*****badge*****/
+
+.badge {
+	font-size: 20px;
+	background-color:#FFFD00;
+	margin-top: -5px;
+	color: black;
+}
+
+/*****badge*****/
+
+/***************bouton********************/
+
+
+/********container 1 (poster)******/
+
+.container1 {
+	display: flex;
+	justify-content: space-around;
+	background-image: url("../img/fond-noir.jpg");
+	align-items: center;
+	margin-top:120px;
+	-webkit-transform: skew(0deg, -1deg);
+	width: 100%;
+}
+
+.presentationtext {
+	color: white;
+	-webkit-transform: skew(0deg, 1deg);
+	text-align: center;
+	font-family:'arial', sans-serif;
+}
+
+.presentationposter {
+	text-align: center;
+	margin: 50px 0 50px 0;
+	-webkit-transform: skew(0deg, 1deg);
+}
+
+/********container 1 (poster)******/
+
+
+/*************titre au dessus des impressions en vente************/
+
+.lesplusvendusbas {
+	color: black;
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 28px;
+}
+
+.lesplusvendus {
+	color: black;
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.lesplusvendus:after {
+	content: '';
+    width: 70px;
+    height: 4px;
+    background: #2f2e2e;
+    display: block;
+    margin: 20px auto 40px;
+}
+
+/*************titre au dessus des impressions en vente************/
+
+
+
+/***************container bouton commander *************/
+
+.containercommander {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.containercommandertitre {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	color: black;
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 17px;
+}
+
+/***************container bouton commander *************/
+
+
+/***************carousel de vente de photos*************/
+
+.carousel {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.promo {
+	color: red;
+	font-size: 22px;
+	border: 1px solid red;
+	border-radius: 30px;
+}
+
+.red {
+	color: red;
+}
+
+.carousel div {
+	margin-top: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	background-size: cover;
+	font-size: 25px;
+	border: 1px solid black;
+}
+
+.carousel div:hover {
+	transform: scale(1.10);
+    transition:0.1s;
+}
+
+
+
+/***************carousel de vente de photos*************/
+
+
+/***************tout type d'impression en vente*************/
+
+/**************carousel de l'accueil des produits en vente**********/
+
+.theme {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0 30px;
+}
+
+.theme .thumbex {
+	margin: 10px 20px 30px;
+	width: 100%;
+	min-width: 200px;
+	max-width: 480px;
+	height: 300px;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	overflow: hidden;
+}
+
+.theme .thumbex .thumbnail {
+	overflow: hidden;
+	min-width: 250px;
+	height: 300px;
+	position: relative;
+	opacity: 0.8;
+	backface-visibility: hidden;
+	transition: all 0.4s ease-out;
+	border-radius: 10px;
+}
+
+.theme .thumbex .thumbnail img {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	backface-visibility: hidden;
+	min-width: 100%;
+	min-height: 100%;
+	border-radius: 10px;
+}
+
+.theme .thumbex .thumbnail:hover {
+	backface-visibility: hidden;
+	transform: scale(1.15, 1.15);
+	opacity: 1;
+	border-radius: 10px;
+}
+
+/***************tout type d'impression en vente*************/
+
+
+/**************************bouton en bas du site*****************************/
+
+.boutondubas {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+.rights {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+
+.titreboutonbasdusite {
+    font-family : 'Yanone Kaffeesatz',sans-serif;
+    font-size : 23px;
+    color : rgba(195,71,139,1.00);
+}
+
+.footerfont {
+    font-size : 15px;
+    color : rgb(255,255,255);
+}
+
+.footerfont:hover {
+    color : rgb(255,192,203);
+}
+
+.boutondubas aaaa:hover {
+    font-size : 13px;
+    color : rgb(255,192,203);
+}
+
+.titreboutondubas svg {
+    color : rgb(255,255,255);
+}
+
+.boutondubas a:hover svg {
+    transform : scale(1.15);
+}
+
+.iconsresseaux {
+    margin-left : 20px;
+    font-size : 17px;
+}
+
+.Apropos {
+    font-size : 20px;
+    color : rgba(195,71,139,1.00);
+}
+
+.ico {
+    color : rgb(255,0,0);
+}
+
+/**************************bouton en bas du site*****************************/
+
+
+/*********************************retour livraison achat bornes**********************************/
+.container10 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	font-size: 40px;
+	color: black;
+}
+
+.container11 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top:0px;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 17px;
+}
+/*********************************retour livraison achat bornes**********************************/
+
+
+/***************************bouton haut de page******************************/
+
+a#cRetour{
+  border-radius:3px;
+	border: 1px solid white;
+  padding:10px;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  background:rgba(0, 0, 0, 0.25);
+  position:fixed;
+  right:20px;
+  opacity:1;
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+}
+a#cRetour:before{ content: "\25b2"; }
+a#cRetour:hover{
+  background:rgba(0, 0, 0, 1);
+  transition:all ease-in 0.2s;
+}
+a#cRetour.cInvisible{
+  bottom:-35px;
+  opacity:0;
+  transition:all ease-in 0.5s;
+}
+
+a#cRetour.cVisible{
+  bottom:20px;
+  opacity:1;
+}
+
+/***************************bouton haut de page******************************/

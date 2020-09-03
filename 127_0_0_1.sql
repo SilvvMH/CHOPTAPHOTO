@@ -1,0 +1,118 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le :  mar. 07 avr. 2020 à 17:35
+-- Version du serveur :  10.4.11-MariaDB
+-- Version de PHP :  7.4.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `1921sio`
+--
+CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `1921sio`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `price` float NOT NULL,
+  `quantité` int(11) NOT NULL,
+  `codepromo` varchar(15) NOT NULL DEFAULT 'promo-2020',
+  `lienimage` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantité`, `codepromo`, `lienimage`) VALUES
+(1, 'Borne noir', 'La borne noire qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/born2.png'),
+(2, 'Borne rouge', 'La borne rouge qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/360x360-rose.png'),
+(3, 'Borne basic bleu', 'La borne bleue qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/bornbleu.png'),
+(4, 'borne basic rose', 'La borne rose qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/bornviolet.png'),
+(5, 'Bornes basic blanche', 'La borne blanche qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/bornblanche.png'),
+(6, 'Borne basic jaune', 'La borne jaune qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/bornjaune.png'),
+(9, '200 photos', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10 ou 12.7x12.7.', 29.99, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/IMPRESSIONPHOTOACCEUIL.png'),
+(10, '400 photos', 'Choptaphoto vous propose ce pack photos de 400 pièces, en dimension 10x10 ou 12.7x12.7.', 59.99, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/impression%20photo.jpg'),
+(11, 'photos en illimité', 'Choptaphoto vous propose ce pack photos illimité, en dimension 10x10 ou 12.7x12.7.', 149.99, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/impression%20photo4.jpg'),
+(12, 'Premium format 10', 'Choptaphoto vous propose ce type de format photos en dimension 10x10 ou 12.7x12.7.', 0.7, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/impression%20photo5.jpg'),
+(13, 'Premium format 13', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10.', 1, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/impression-photo.png'),
+(14, 'Format rétro', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 9.2×10.2 cm.', 1.5, 10000, 'promo-2020', 'http://localhost/choptaphoto/img/impression%20photo6.jpg'),
+(16, 'Borne personnalisable ', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un evénement ! elle est personnalisable de la tete au pied !', 199.99, 100, 'promo-2020', 'http://localhost/choptaphoto/img/bornreseaux.png'),
+(17, 'Borne anniversaire', 'Cette borne anniversaire qu\'on vous propose est une borne premium, elle est destinée aux particuliers qui souhaitent fêter leur jour d\'anniversaire et garder des milliers de souvenirs avec leurs invités ! elle est personnalisable de la tete au pied !', 199.99, 100, 'promo-2020', 'http://localhost/choptaphoto/img/bornannivsilv.png'),
+(18, 'borne pour entreprise', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un événement ! elle est personnalisable de la tête au pied !', 199.99, 50, 'promo-2020', 'http://localhost/choptaphoto/img/bornefficom.png');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `age` date NOT NULL,
+  `adresse` varchar(255) NOT NULL,
+  `ville` varchar(255) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `passwd` varchar(255) NOT NULL,
+  `role` varchar(20) NOT NULL DEFAULT 'client'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,295 @@
+***/
+
+.blueButton {
+	-moz-box-shadow: inset 0px -3px 7px 0px rgba(195,71,139,1.00);
+	-webkit-box-shadow: inset 0px -3px 7px 0px rgba(195,71,139,1.00);
+	box-shadow: inset 0px -3px 7px 0px rgba(195,71,139,1.00);
+	background-color: #0088BB;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #0088BB;
+	display: inline-block;
+	cursor: pointer;
+	color: #fff;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 10px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px rgba(195,71,139,1.00);
+}
+
+.blueButton:hover {
+	background-color: rgba(195,71,139,1.00);
+}
+
+.blueButton:active {
+	position: relative;
+	top: 1px;
+}
+
+.payment input[type=text] {
+	width: 95%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: none;
+	text-align: left;
+}
+
+.payment input[type=text]:focus {
+	border: 1px solid #a8a8a8;
+}
+
+.payment input[type=submit],
+.payment input[type=button] {
+	float: right;
+	margin: -20px 20px 10px 0px;
+}
+
+.payment {
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	padding: 40px;
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 20px;
+	box-shadow: 1px 1px 5px #888888;
+}
+
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;
+}
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+}
+.credit-card-box label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box .payment-errors {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box label {
+    display: block;
+}
+
+.credit-card-box .display-table {
+    display: table;
+    background-color: white;
+}
+.credit-card-box .display-tr {
+    width: 100%;
+    background-color: white;
+    display: table-row-group;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+.credit-card-box .panel-heading img {
+    min-width: 180px;
+}
+
+/* nav */
+
+/******************Body********************/
+
+body {
+    overflow-x : hidden;
+}
+
+.backgroundhautdusite {
+    margin-top : -20px;
+    background-image : url("../img/FOND-NOIR-PENCHE.png");
+}
+
+/**image bas du site penchée**/
+
+.backgroundbasdusite {
+    display : flex;
+    margin-top : 60px;
+    margin-bottom : -5px;
+}
+
+/**image bas du site penchée**/
+
+a:hover {
+    text-decoration : none;
+    color : rgb(0,0,0);
+}
+
+a {
+    color : rgb(0,0,0);
+}
+
+/******************Body********************/
+
+/*****************Alert********************/
+
+.alert {
+    padding : 1px;
+    border : 0;
+    border-radius : 0;
+    font-size : 15px;
+    color : rgb(255,255,255);
+    background : rgba(195,71,139,1.00);
+}
+
+.containeralert {
+    display : flex;
+    justify-content : space-around;
+    margin-top : 10px;
+    font-weight : 400;
+}
+
+/*****************Alert********************/
+
+/****************Nav-bar banner******************/
+
+.navbar {
+    display : flex;
+    justify-content : space-between;
+    width : 100%;
+    margin-top : -20px;
+    border-radius : 0;
+    font-size : 20px;
+    line-height : 50px;
+    background : rgb(0,0,0);
+}
+
+.navbar img {
+    width : 100%;
+    height : 70px;
+    max-width : 300px;
+}
+
+.navbar a:hover svg {
+    animation : bounce 0.7s ease infinite;
+}
+
+@keyframes bounce {
+    from {
+        transform : translateY(1px);
+    }
+
+    to {
+        transform : translateY(-2.5px);
+    }
+}
+
+.left {
+    margin-top : 10px;
+    margin-left : 0;
+}
+
+.color {
+    padding : 10px;
+    color : rgb(255,255,255);
+}
+
+.color:hover {
+    color : rgba(255,0,187,1.00);
+    transition : 0.7s;
+}
+
+.right {
+    margin-top : 10px;
+    margin-right : 10px;
+}
+
+.right img {
+    width : 100%;
+    height : 20px;
+    margin : 14px;
+    max-width : 20px;
+}
+
+/****************Nav-bar banner******************/
+
+/**image haut du site penchée**/
+
+.containernavbar {
+    display : flex;
+    background-image : url("../img/fond-noir.jpg");
+}
+
+/**image haut du site penchée**/
+
+
+/**************************bouton en bas du site*****************************/
+
+.boutondubas {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+.rights {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+.titreboutonbasdusite {
+    font-family : 'Yanone Kaffeesatz',sans-serif;
+    font-size : 23px;
+    color : rgba(195,71,139,1.00);
+}
+
+.footerfont {
+    font-size : 15px;
+    color : rgb(255,255,255);
+}
+
+.footerfont:hover {
+    color : rgb(255,192,203);
+}
+
+.boutondubas aaaa:hover {
+    font-size : 13px;
+    color : rgb(255,192,203);
+}
+
+.titreboutondubas svg {
+    color : rgb(255,255,255);
+}
+
+.boutondubas a:hover svg {
+    transform : scale(1.15);
+}
+
+.iconsresseaux {
+    margin-left : 20px;
+    font-size : 17px;
+}
+
+.Apropos {
+    font-size : 20px;
+    color : rgba(195,71,139,1.00);
+}
+
+.ico {
+    color : rgb(255,0,0);
+}
+
+/**************************bouton en bas du site*****************************/
+/* nav */

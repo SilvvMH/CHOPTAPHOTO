@@ -1,0 +1,764 @@
+/*****************Body************/
+
+body {
+    overflow-x: hidden;
+}
+
+.backgroundhautdusite {
+    width: 100%;
+    margin-top: -20px;
+    background-image: url("../img/FOND-NOIR-PENCHE.png");
+}
+
+/**image bas du site penchée**/
+
+.backgroundbasdusite {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: -5px;
+}
+
+/**image bas du site penchée**/
+
+a:hover {
+    text-decoration: none;
+}
+
+/*****************Body************/
+
+/*****************Alert********************/
+
+.alert {
+    padding: 1px;
+    border: 0;
+    border-radius: 0;
+    font-size: 15px;
+    color: white;
+    background: rgba(195,71,139,1.00);
+}
+
+.containeralert {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/*****************Alert********************/
+
+/****************Nav-bar banner******************/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+    border-radius: 0;
+    font-size: 15px;
+    font-size: 20px;
+    line-height: 50px;
+    background: #000;
+}
+
+.navbar img {
+    width: 100%;
+    height: 100%;
+    max-height: 70px;
+    max-width: 300px;
+}
+
+.navbar a:hover svg {
+    animation: bounce 0.7s ease;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(1px);
+    }
+
+    to {
+        transform: translateY(-2.5px);
+    }
+}
+
+.left {
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.color {
+    padding: 10px;
+    color: white;
+}
+
+.color:hover {
+    color: rgba(255,0,187,1.00);
+    transition: 0.7s;
+}
+
+.right {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.right img {
+    width: 0;
+    height: 0;
+    margin: 14px;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+/****************Nav-bar banner******************/
+
+/***************bouton********************/
+
+.btn {
+    align-items: center;
+    border: 0;
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+
+.btn:hover {
+    color: black;
+    background-color: #FD0;
+}
+
+.containerboutoncommander {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+/*****badge*****/
+
+.badge {
+    margin-top: -5px;
+    font-size: 20px;
+    color: black;
+    background-color: #FFFD00;
+}
+
+/*****badge*****/
+
+.boutonvoirloffre {
+    text-align: center;
+}
+
+/***************bouton********************/
+
+/***********bornes présentation***********/
+
+/**global parametres**/
+
+.presentationtext {
+    text-align: center;
+    font-family: 'arial',sans-serif;
+    color: white;
+    -webkit-transform: skew(0deg,-1deg);
+}
+
+.presentationimage {
+    text-align: center;
+}
+
+.titre {
+    text-align: center;
+    font-family: 'arial',sans-serif;
+    color: white;
+    -webkit-transform: skew(0deg,0deg);
+}
+
+.titrebornepersonnalisable {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    color: black;
+}
+
+.titrebornepersonnalisable:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 20px auto 40px;
+    max-height: 4px;
+    max-width: 70px;
+    background: #2f2e2e;
+}
+
+/**global parametres**/
+
+/******************BORNE A VENDRE TEST************************/
+
+/*****global parametrs pour le card de vente de borne*****/
+
+.containercouleur {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/*****global parametrs pour le card de vente de borne*****/
+
+/************borne noir et rouge*************/
+
+figure.snip0016 {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    max-height: 360px;
+    max-width: 360px;
+    border-radius: 50px;
+    overflow: hidden;
+    text-align: left;
+    font-family: 'Raleway',sans-serif;
+    color: #fff;
+    background: #000;
+}
+
+figure.snip0016 img {
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.snip0016 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 3em;
+}
+
+figure.snip0016 figcaption::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 100%;
+    border-left: 4px solid rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+figure.snip0016 h2,
+figure.snip0016 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s,-webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+
+figure.snip0016 h2 {
+    text-decoration: underline;
+    -webkit-transform: translate3d(30%,0%,0);
+    transform: translate3d(30%,0%,0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+figure.snip0016 h2 span {
+    font-weight: 800;
+}
+
+figure.snip0016 p {
+    margin-top: 50px;
+    font-weight: 200;
+    -webkit-transform: translate3d(0%,30%,0);
+    transform: translate3d(0%,30%,0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip0016 a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+}
+
+figure.snip0016:hover img {
+    opacity: 0.1;
+}
+
+figure.snip0016:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%,0%,0);
+    transform: translate3d(0%,0%,0);
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+figure.snip0016:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transform: translate3d(0%,0%,0);
+    transform: translate3d(0%,0%,0);
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.5s;
+}
+
+figure.snip0016:hover figcaption::before {
+    left: 30px;
+    opacity: 0.3;
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/* container des bornes rouge et noir */
+
+.containercouleur {
+    display: flex;
+    justify-content: center;
+}
+
+/* container des bornes rouge et noir */
+
+/************fin borne noir et rouge*************/
+
+/****************bornes de couleurs***************/
+
+/*****global parametrs couleur*****/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    transform: translateY(100%);
+}
+
+.prixbornecouleursimple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    transform: translateY(100%);
+}
+
+/*****global parametrs couleur*****/
+
+/************borne BLEU et JAUNE et BLANCHE et VIOLETTE*************/
+
+figure.snip00161 {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    max-height: 360px;
+    max-width: 360px;
+    border-radius: 50px;
+    overflow: hidden;
+    text-align: left;
+    font-family: 'Raleway',sans-serif;
+    color: black;
+    background: rgba(180,180,180,0.2);
+}
+
+figure.snip00161 img {
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.snip00161 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 3em;
+}
+
+figure.snip00161 figcaption::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 100%;
+    border-left: 4px solid black;
+    opacity: 0.4;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+figure.snip00161 h2,
+figure.snip00161 p {
+    margin: 0 0 5px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s,-webkit-transform 0.35s;
+    transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+
+figure.snip00161 h2 {
+    text-decoration: underline;
+    -webkit-transform: translate3d(30%,0%,0);
+    transform: translate3d(30%,0%,0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+figure.snip00161 h2 span {
+    font-weight: 800;
+}
+
+figure.snip00161 p {
+    margin-top: 50px;
+    font-weight: 200;
+    -webkit-transform: translate3d(0%,30%,0);
+    transform: translate3d(0%,30%,0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip00161 a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: black;
+}
+
+figure.snip00161:hover img {
+    opacity: 0.1;
+}
+
+figure.snip00161:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%,0%,0);
+    transform: translate3d(0%,0%,0);
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+figure.snip00161:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transform: translate3d(0%,0%,0);
+    transform: translate3d(0%,0%,0);
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.5s;
+}
+
+figure.snip00161:hover figcaption::before {
+    left: 30px;
+    opacity: 0.3;
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/************borne BLEU et JAUNE et BLANCHE et VIOLETTE*************/
+
+/**************** fin bornes de couleurs***************/
+
+/*****container 1 (anniversaire)*****/
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 120px;
+    background-image: url("../img/fond-noir.jpg");
+    -webkit-transform: skew(0deg,1deg);
+}
+
+/*****container 1 (anniversaire)*****/
+
+/*****container 2 (entreprise)*****/
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+    background-image: url("../img/fond-noir.jpg");
+    -webkit-transform: skew(0deg,-2deg);
+}
+
+.presentationtext2 {
+    text-align: center;
+    font-family: 'arial',sans-serif;
+    color: white;
+    -webkit-transform: skew(0deg,2deg);
+}
+
+.presentationimage2 {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.titrebornepersonnalisable2 {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    color: black;
+}
+
+.boutonvoirloffreentreprise {
+    align-items: center;
+    margin-left: 595px;
+    border: dashed;
+    border-color: black;
+    border-radius: 75px;
+    text-align: center;
+    color: white;
+    background-color: grey;
+}
+
+/*****container 2 (entreprise)*****/
+
+/********************container réseaux sociaux*******************/
+
+.containerreseaux {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-image: url("../img/fond-noir.jpg");
+    -webkit-transform: skew(0deg,-1deg);
+}
+
+.presentationtextreseaux {
+    text-align: center;
+    font-family: 'arial',sans-serif;
+    color: white;
+    -webkit-transform: skew(0deg,1deg);
+}
+
+.presentationimagereseaux {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*****************container réseaux sociaux********************/
+
+/*********texte connectivité de la borne***************/
+
+.texteconnectivite {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    font-size: 19px;
+    font-weight: bold 500;
+}
+
+.titretextconnect {
+    text-align: center;
+    font-family: 'Anton',sans-serif;
+}
+
+/*********texte connectivité de la borne***************/
+
+/*************rayon vente de borne***************/
+
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    background-color: white;
+}
+
+
+.carousel div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 20px;
+    background-size: cover;
+}
+
+.carousel img {
+    width: 300px;
+    height: 180px;
+}
+
+/*************rayon vente de borne***************/
+
+/*************différentes bornes en vente***************/
+
+.rouge {
+    background-image: url("../img/bornrouge.png");
+}
+
+.vert {
+    background-image: url("../img/bornvert.png");
+}
+
+.jaune {
+    background-image: url("../img/bornjaune.png");
+}
+
+.violet {
+    background-image: url("../img/bornviolet.png");
+}
+
+.blanche {
+    background-image: url("../img/bornELEGANTEBLANCHENOIR.png");
+}
+
+/*************différentes bornes en vente***************/
+
+/*****************PRIX BORNES*****************/
+
+.PRIXBORNES {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Anton',sans-serif;
+}
+
+/*****************PRIX BORNES*****************/
+
+/**************************bouton en bas du site*****************************/
+
+.boutondubas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #000;
+}
+
+.rights {
+    display : flex;
+    justify-content : space-around;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    color : rgb(255,255,255);
+    background : rgb(0,0,0);
+}
+
+
+
+.titreboutonbasdusite {
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    font-size: 23px;
+    color: rgba(195,71,139,1.00);
+}
+
+.footerfont {
+    font-size: 15px;
+    color: white;
+}
+
+.footerfont:hover {
+    color: pink;
+}
+
+.boutondubas aaaa:hover {
+    font-size: 13px;
+    color: pink;
+}
+
+
+.titreboutondubas svg {
+    color: white;
+}
+
+.boutondubas a:hover svg {
+    transform: scale(1.15);
+}
+
+.iconsresseaux {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.Apropos {
+    font-size: 20px;
+    color: rgba(195,71,139,1.00);
+}
+
+.ico {
+    color: red;
+}
+
+/**************************bouton en bas du site*****************************/
+
+
+/***************************bouton haut de page******************************/
+
+a#cRetour {
+    z-index: 99999;
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.25);
+    transition: all ease-in 0.2s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+a#cRetour:before {
+    content: "\25b2";
+}
+
+a#cRetour:hover {
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+}
+
+a#cRetour.cInvisible {
+    bottom: -35px;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+a#cRetour.cVisible {
+    bottom: 20px;
+    opacity: 1;
+}
+
+/***************************bouton haut de page******************************/
+
+@media screen and (max-width:767px) {
+    .flex-mob-col {
+        flex-direction: column;
+    }
+}
