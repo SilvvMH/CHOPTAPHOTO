@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 03 sep. 2020 à 16:29
+-- Généré le :  jeu. 03 sep. 2020 à 16:48
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP :  7.4.1
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `1921sio`
 --
-CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `1921sio`;
 
 -- --------------------------------------------------------
@@ -129,11 +129,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `age`, `adresse`, `ville`, `login`, `passwd`, `role`, `civilité`) VALUES
-(21, 'MAHIEU', 'Silvère', '2000-07-06', '34 allée des primevères, les hauts du paradis', 'Wervicq-sud', 'silvere.mh@admin.fr', '32ff9ee7e841b26a966870c144fdcaec', 'administrateur', ''),
-(24, 's', 's', '2000-07-06', '34 allée des primevères, les hauts du paradis', 'Wervicq-sud', 'silvere.mh@client.fr', '62608e08adc29a8d6dbc9754e659f125', 'client', ''),
-(29, '', 'Silvère', '2000-07-06', '34 allée des primevères, les hauts du paradis', '34 allée des primevères, les hauts du paradis', 'silvere.mh@fgergfe.fr', '774cf0bf5bbbd903b6ec8f8a2a75a459', 'client', ''),
-(30, 'MAHIEU', 'Silvère', '2000-07-06', '34 allée des primevères, les hauts du paradis', '34 allée des primevères, les hauts du paradis', 'silvere.mh@dtgdg.fr', '759de2da9765b4ec39a6a633c3d42f74', 'client', 'Monsieur'),
-(32, 'MAHIEU', 'Silvère', '2000-07-06', '34 allée des primevères, les hauts du paradis', '34 allée des primevères, les hauts du paradis', 'silvere.mh@outlook.fr', 'bf083d4ab960620b645557217dd59a49', 'client', 'Monsieur');
+(21, 'MAHIEU', 'Silvère', '2000-01-01', '20 Allée des bonnes notes', 'Wervicq-sud', 'chop@admin.fr', '32ff9ee7e841b26a966870c144fdcaec', 'administrateur', ''),
+(24, 'VANDERPLANCKE', 'Benoît', '2000-01-01', '20 Allée des bonnes notes', 'Wervicq-sud', 'chop@client.fr', '62608e08adc29a8d6dbc9754e659f125', 'client', '');
 
 --
 -- Index pour les tables déchargées
