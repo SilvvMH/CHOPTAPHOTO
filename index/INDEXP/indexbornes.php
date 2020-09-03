@@ -206,43 +206,6 @@
     <br>
     <br>
 
-    <!--------------------bornes entreprises----------------->
-    <h2 class="titrebornepersonnalisable2">Les marques qui nous ont fait confiance :</h2>
-    <br>
-
-    <!--BR-->
-    <br>
-    <br>
-    <!--BR-->
-
-    <div class="carousel">
-        <div class="nike"><img class="nike1" src="img/nike.png"></div>
-        <div class="creditagricol"><img class="creditagricol1" src="img/Crédit_Agricole.png"></div>
-        <div class="carrefour"><img class="carrefour1" src="img/Carrefour.png"></div>
-        <div class="apave"><img class="apave1" src="img/apave.png"></div>
-    </div>
-
-    <!--BR-->
-    <br>
-    <!--BR-->
-
-    <div class="PRIXBORNES">
-        <div>Nike</div>
-        <div>Credit Agricole</div>
-        <div>Carrefour</div>
-        <div>Apave</div>
-    </div>
-
-    <!--BR-->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!--BR-->
-
-    <!-----------------------bornes entreprises--------------------->
-
 
 </body>
 
