@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 03 sep. 2020 à 16:48
+-- Généré le :  ven. 04 sep. 2020 à 16:54
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP :  7.4.1
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `1921sio`
 --
-CREATE DATABASE IF NOT EXISTS `1921sio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `1921sio`;
 
 -- --------------------------------------------------------
 
@@ -44,6 +42,20 @@ CREATE TABLE `commentaire` (
 INSERT INTO `commentaire` (`id`, `id_client`, `commentaire`, `date_com`) VALUES
 (1, 24, 'Bonjour, très satisfait du service. Petit problème d\'installation, un technicien est venu dans l\'heure pour me dépanner.  ', '2020-06-18'),
 (2, 21, 'Produit super bien fini, super qualité photo et prix abordable ! je conseil :)', '2020-06-02');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `facture`
+--
+
+CREATE TABLE `facture` (
+  `id` int(11) NOT NULL,
+  `idResa` int(11) NOT NULL,
+  `date` datetime NOT NULL,
+  `total` float NOT NULL,
+  `solde` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -103,7 +115,7 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`id`, `idBorne`, `idClient`, `debut`, `fin`) VALUES
-(13, 3, 1, '2020-06-28', '2020-06-30');
+(1, 5, 24, '2020-09-10', '2020-09-15');
 
 -- --------------------------------------------------------
 
@@ -145,6 +157,13 @@ ALTER TABLE `commentaire`
   ADD KEY `id_client_2` (`id_client`);
 
 --
+-- Index pour la table `facture`
+--
+ALTER TABLE `facture`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idResa` (`idResa`);
+
+--
 -- Index pour la table `products`
 --
 ALTER TABLE `products`
@@ -156,7 +175,9 @@ ALTER TABLE `products`
 ALTER TABLE `reservation`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idBorne` (`idBorne`),
-  ADD KEY `idClient` (`idClient`);
+  ADD KEY `idClient` (`idClient`),
+  ADD KEY `idBorne_2` (`idBorne`),
+  ADD KEY `idClient_2` (`idClient`);
 
 --
 -- Index pour la table `users`
@@ -176,6 +197,12 @@ ALTER TABLE `commentaire`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT pour la table `facture`
+--
+ALTER TABLE `facture`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
@@ -185,7 +212,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `users`
@@ -202,6 +229,19 @@ ALTER TABLE `users`
 --
 ALTER TABLE `commentaire`
   ADD CONSTRAINT `commentaire_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `facture`
+--
+ALTER TABLE `facture`
+  ADD CONSTRAINT `facture_ibfk_1` FOREIGN KEY (`idResa`) REFERENCES `reservation` (`id`);
+
+--
+-- Contraintes pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`idBorne`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
