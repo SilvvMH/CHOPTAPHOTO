@@ -1,3 +1,8 @@
+<?php 
+
+require("params\BDD\bdd.php");
+?>
+
 <head>
 <style>
 .image {
@@ -9,9 +14,6 @@
 </style>
 </head>
 <?php 
-
-session_start();
-require("params\BDD\bdd.php");
 
 if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
 {
