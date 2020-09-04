@@ -18,6 +18,8 @@
 		<input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
 		<br>
 		<button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Confirmez le payement</button>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+		<button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Voir la facture</button>
 		<br><br>
 </form>
 </form>

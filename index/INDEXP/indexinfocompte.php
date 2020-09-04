@@ -118,8 +118,13 @@ require("params/BDD/bdd.php");
                     </div>
 
                     <div>
-                        <h2>MOT DE PASSE</h2>
+                        <h2>AJOUTER UN ARTICLE</h2>
                         <a href="index.php?page=ajouterunarticle" ><button type="submit" class="btn btn-primary form-group">Ajouter un article</button></a> 
+                    </div>
+
+                    <div>
+                        <h2>VOIR LES RESERVATIONS</h2>
+                        <a href="index\INDEXP\lesreservations.php" ><button type="submit" class="btn btn-primary form-group">Ajouter un article</button></a> 
                     </div>
 
                     </div>
