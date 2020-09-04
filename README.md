@@ -1,7 +1,7 @@
 #ChopTaPhoto2.0
  
 
-Informations sur le PPE de Silvère et Benoit :
+Informations sur le PPE2 de Silvère et Benoit :
 
 
 Connexion & inscription :
