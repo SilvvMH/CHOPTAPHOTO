@@ -187,10 +187,10 @@
     <!------------------------texte 4g et connetivité de la borne---------------->
 
     <!----------------------image borne 2-------------------->
-    <div class="container2 flex-mob-col" id="container2">
-        <div class="presentationimage2"><img src="img/bornefficom.png"></div>
-        <div class="presentationtext2">
-            <h2 class="titre">LA BORNE POUR TON ENTREPRISE ! <span class="badge badge-secondary">basic</span></h2>L'école EFFICOM à Lille nous a fait confiance.
+    <div class="container2borne flex-mob-col" id="container2">
+        <div class="presentationimage2borne"><img src="img/bornefficom.png"></div>
+        <div class="presentationtext2borne">
+            <h2 class="titreborne">LA BORNE POUR TON ENTREPRISE ! <span class="badge badge-secondary">basic</span></h2>L'école EFFICOM à Lille nous a fait confiance.
             <br> Nous lui avons fourni une borne à leur image avec leur logo,
             <br>les élèves l'ont adorée et ont tous reçu leur photo par la suite.
             <br>
@@ -205,43 +205,6 @@
 
     <br>
     <br>
-
-    <!--------------------bornes entreprises----------------->
-    <h2 class="titrebornepersonnalisable2">Les marques qui nous ont fait confiance :</h2>
-    <br>
-
-    <!--BR-->
-    <br>
-    <br>
-    <!--BR-->
-
-    <div class="carousel">
-        <div class="nike"><img class="nike1" src="img/nike.png"></div>
-        <div class="creditagricol"><img class="creditagricol1" src="img/Crédit_Agricole.png"></div>
-        <div class="carrefour"><img class="carrefour1" src="img/Carrefour.png"></div>
-        <div class="apave"><img class="apave1" src="img/apave.png"></div>
-    </div>
-
-    <!--BR-->
-    <br>
-    <!--BR-->
-
-    <div class="PRIXBORNES">
-        <div>Nike</div>
-        <div>Credit Agricole</div>
-        <div>Carrefour</div>
-        <div>Apave</div>
-    </div>
-
-    <!--BR-->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!--BR-->
-
-    <!-----------------------bornes entreprises--------------------->
 
 
 </body>

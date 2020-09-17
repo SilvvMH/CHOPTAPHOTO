@@ -1,6 +1,9 @@
 <?php
     $id_resa = $_GET['idResa'];
 	$req = "SELECT * FROM reservation WHERE id = $id_resa";
+	$Bdd->query($req);
+	while ($usr = $Bdd->fetch())
+	{
 ?>
 <?php
 
@@ -60,6 +63,7 @@
 		"quantity" => 1,
 		"project_id" => 1
 	);
+}
 
 	ob_start();
 	$total = 0;
