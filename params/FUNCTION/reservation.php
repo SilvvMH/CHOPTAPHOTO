@@ -65,6 +65,7 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
     $idBorne = $_GET['idBorne'];
     $debut = $_POST['debut'];
     $fin = $_POST['fin'];
+    $idClient = $_SESSION['id'];
 
     if (strtotime($debut) <= strtotime($fin) && strtotime($debut) > time())
     {
@@ -88,9 +89,8 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                 
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
-                    $idUsr =$_SESSION['id'];
                     $tab = array($idBorne,$idUsr,$debut, $fin);
-                    $req ="INSERT INTO `reservation` (`id`, `idBorne`, `idClient`, `debut`, `fin`) VALUES (NULL, '$idBorne', '$idUsr', '$debut', '$fin')";
+                    $req ="INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
                     echo $req;
