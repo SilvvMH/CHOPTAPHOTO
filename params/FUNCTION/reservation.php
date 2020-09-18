@@ -89,11 +89,10 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                 
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
-                    $tab = array($idBorne,$idUsr,$debut, $fin);
-                    $req ="INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
+                    $tab = array($idBorne,$idClient,$debut, $fin);
+                    $req = "INSERT INTO `reservation` (`id`, `idBorne`, `idClient`, `debut`, `fin`) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
-                    echo $req;
                     echo "Pour valider votre commande, veuillez procéder au payement en ";
                     ?><a href="index.php?page=indexpanier&id=<?php echo $idBorne; ?>&qtt=1"><button class="dropbtn">cliquant ici</button></a><?php   
                     echo "<br>rappel de la période que vous avez selectionné : ". $debut ." au ". $fin;             

@@ -56,11 +56,11 @@ else
             <form method="POST" action="">
                 <div class="form-group">
                     <label for="email">Votre e-mail:</label>
-                    <input type="email" id="email" class="form-control" placeholder="Entrer votre e-mail" name="login">
+                    <input type="email" id="email" class="form-control input" placeholder="Entrer votre e-mail" name="login">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Votre mot de passe:</label>
-                    <input type="password" class="form-control" placeholder="Entrer votre mot de passe" name="password">
+                    <input type="password" class="form-control input" placeholder="Entrer votre mot de passe" name="password">
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary form-group">Se connecter</button>
