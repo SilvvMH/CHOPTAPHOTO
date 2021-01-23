@@ -76,9 +76,9 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                  $req = "SELECT count(*) AS nbresa FROM reservation 
                  WHERE idBorne = $idBorne 
                  AND (
-                         ((debut BETWEEN '$debut' AND '$fin') AND (fin BETWEEN '$debut' AND '$fin'))
-                         OR ('$debut' BETWEEN debut AND fin)
-                         OR ('$fin' BETWEEN debut AND fin)
+                         ((debut BETWEEN $debut AND $fin) AND (fin BETWEEN $debut AND $fin))
+                         OR ($debut BETWEEN debut AND fin)
+                         OR ($fin BETWEEN debut AND fin)
                      )";
                  $ORes = $bdd->query($req);
                  if($resa = $ORes->fetch())
@@ -90,7 +90,7 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
                     $tab = array($idBorne,$idClient,$debut, $fin);
-                    $req = "INSERT INTO `reservation` (`id`, `idBorne`, `idClient`, `debut`, `fin`) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
+                    $req = "INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
                     echo "Pour valider votre commande, veuillez procéder au payement en ";

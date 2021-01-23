@@ -8,20 +8,28 @@ html, body {
     position:relative;
 }
 
-.input{
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+.container {
+    width: 50%;
     align-items: center;
 }
 
-.container{
+.container input {
+    justify-content: space-around;
     text-align: center;
+}
+
+.form-group {
+    align-items: center;
+}
+.form-control {
+    width: 100%;
     align-items: center;
 }
 
 .backgroundhautdusite {
     margin-top : -20px;
+    background-size: cover;
+    background: no-repeat;
     background-image : url("../img/FOND-NOIR-PENCHE.png");
 }
 

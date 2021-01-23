@@ -19,10 +19,32 @@
 		<br>
 		<button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Confirmez le payement</button>
 		<p>&emsp;&emsp;&emsp;&emsp;&emsp;</p>
-		<a href="index.php?page=facture&idResa="."><button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Voir la facture</button></a>
 		<br><br>
 </form>
-</form>
+
+<a href="index/INDEXP/facturation.cs"><button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Voir la facture</button></a>
+<script type="text/c#">
+using System;
+using System.Linq;
+using System.Text;
+using System.Net;
+using SautinSoft.Document;
+
+namespace generate_pdf_to_html
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DocumentCore dc = new DocumentCore();
+            dc.Content.End.Insert("hello World", new CharacterFormat());
+            dc.Save("MonPDF.pdf");
+
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("MonPDF.pdf") { UseShellExecute = true });
+        }
+    }
+}
+</script>
 <br>
 <br>
 <br>
