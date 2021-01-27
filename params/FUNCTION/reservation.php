@@ -11,6 +11,9 @@ require("params\BDD\bdd.php");
 .image img{
     width: 150px;
 }
+.marginlft{
+    margin-left: 10%;
+}
 </style>
 </head>
 
@@ -60,12 +63,16 @@ else
     <?php
 }
 
-if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
+if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin'], $_SESSION['login']))
 {
     $idBorne = $_GET['idBorne'];
     $debut = $_POST['debut'];
     $fin = $_POST['fin'];
-    $idClient = $_SESSION['id'];
+    $log = addslashes($_SESSION['login']);
+    $req = "SELECT id  FROM users WHERE login LIKE (\"$log\") ";
+    $ORes = $bdd->query($req);
+    $usr = $ORes->fetch();
+    $idClient = $usr->id;
 
     if (strtotime($debut) <= strtotime($fin) && strtotime($debut) > time())
     {
@@ -89,14 +96,13 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                 
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
-                    $tab = array($idBorne,$idUsr,$debut, $fin);
-                    $req ="INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
+                    $tab = array($idBorne,$idClient,$debut, $fin);
+                    $req ="INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, '$debut', '$fin')";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
-                    echo $req;
-                    echo "Pour valider votre commande, veuillez procéder au payement en ";
-                    ?><a href="index.php?page=indexpanier&id=<?php echo $idBorne; ?>&qtt=1"><button class="dropbtn">cliquant ici</button></a><?php   
-                    echo "<br>rappel de la période que vous avez selectionné : ". $debut ." au ". $fin;             
+                    echo "<p class=\"marginlft\">Pour valider votre commande, veuillez procéder au payement en ";
+                    ?><a href="index.php?page=indexpanier&id=<?php echo $idBorne; ?>&qtt=1"><button class="dropbtn">cliquant ici</button></a></p><?php   
+                    echo "<br><p class=\"marginlft\">rappel de la période que vous avez selectionné : ". $debut ." au ". $fin . "</p>";             
                 }
                 else
                 {
@@ -122,6 +128,7 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
         echo "Veuillez selectionner une date correcte";
     }
 }
+
             ?>
 
             </div>

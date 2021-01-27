@@ -4,8 +4,7 @@
 	$Bdd->query($req);
 	while ($usr = $Bdd->fetch())
 	{
-?>
-<?php
+
 
 	$user = array(
 		"id" => 1,

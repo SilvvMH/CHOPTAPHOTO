@@ -19,7 +19,7 @@
 		<br>
 		<button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Confirmez le payement</button>
 		<p>&emsp;&emsp;&emsp;&emsp;&emsp;</p>
-		<a><button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Voir la facture</button></a>
+		<a href="index.php?page=facture" class="blueButton" style="float:right;border-radius: 15px;">Voir la facture</a>
 		<br><br>
 </form>
 </form>

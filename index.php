@@ -139,7 +139,8 @@ $p = array("indexbornes" => "index/INDEXP/indexbornes.php",
            "deconnexion" => "params/FUNCTION/deconnexion.php",
            "delete" => "params/FUNCTION/delete.php",
            "reservation" => "params/FUNCTION/reservation.php",
-           "payement" => "params/FUNCTION/payement.php");
+           "payement" => "params/FUNCTION/payement.php",
+           "facture" => "index/INDEXP/facture-base.php");
 
 if (isset($_GET["page"])){
     $page = $p[$_GET['page']];
