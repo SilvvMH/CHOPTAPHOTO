@@ -243,7 +243,7 @@ function    playPanier($bdd)
                             <?php
                         }
                 }
-                if($_SESSION['panier'])
+                if($_SESSION["panier"])
                 {
                     $prix_total   = 0;
                     $total_panier = count($_SESSION['panier']);
@@ -257,10 +257,10 @@ function    playPanier($bdd)
                                         $prix_unitaire = $donnees->price;
                                         $prix += $_SESSION['panier'][$i]['qtt'] * $prix_unitaire; 
                                     }
-                                $prix_total += $prix;
+                                    $prix_total += $prix;
                                 $prix_TTC=round($prix_total * 1.196, 2);
                             }
-                    ?>
+                            ?>
                     <br>
                     <br>
                     <br>
@@ -272,8 +272,9 @@ function    playPanier($bdd)
                                 ?>
                                     <p>Prix TTC :<?php echo $prix_TTC; ?> €</p>
                                 <?php
+                                    echo $_SESSION["panier"][$i]["produit"];
 
-                            ?>
+?>
                             </div>
                             <div style="margin-right: 25px; align-items: center;float: right; border: solid black 1px; padding:10px; border-radius:10px; vertical-align: center;">
                                 <p>Prix HT :<?php echo $prix_total; ?> €</p>

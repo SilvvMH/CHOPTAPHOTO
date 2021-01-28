@@ -11,9 +11,6 @@ require("params\BDD\bdd.php");
 .image img{
     width: 150px;
 }
-.marginlft{
-    margin-left: 10%;
-}
 </style>
 </head>
 
@@ -63,16 +60,12 @@ else
     <?php
 }
 
-if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin'], $_SESSION['login']))
+if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
 {
     $idBorne = $_GET['idBorne'];
     $debut = $_POST['debut'];
     $fin = $_POST['fin'];
-    $log = addslashes($_SESSION['login']);
-    $req = "SELECT id  FROM users WHERE login LIKE (\"$log\") ";
-    $ORes = $bdd->query($req);
-    $usr = $ORes->fetch();
-    $idClient = $usr->id;
+    $idClient = $_SESSION['id'];
 
     if (strtotime($debut) <= strtotime($fin) && strtotime($debut) > time())
     {
@@ -83,9 +76,9 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin'], $_SESSION['login']))
                  $req = "SELECT count(*) AS nbresa FROM reservation 
                  WHERE idBorne = $idBorne 
                  AND (
-                         ((debut BETWEEN '$debut' AND '$fin') AND (fin BETWEEN '$debut' AND '$fin'))
-                         OR ('$debut' BETWEEN debut AND fin)
-                         OR ('$fin' BETWEEN debut AND fin)
+                         ((debut BETWEEN $debut AND $fin) AND (fin BETWEEN $debut AND $fin))
+                         OR ($debut BETWEEN debut AND fin)
+                         OR ($fin BETWEEN debut AND fin)
                      )";
                  $ORes = $bdd->query($req);
                  if($resa = $ORes->fetch())
@@ -97,12 +90,12 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin'], $_SESSION['login']))
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
                     $tab = array($idBorne,$idClient,$debut, $fin);
-                    $req ="INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, '$debut', '$fin')";
+                    $req = "INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
-                    echo "<p class=\"marginlft\">Pour valider votre commande, veuillez procéder au payement en ";
-                    ?><a href="index.php?page=indexpanier&id=<?php echo $idBorne; ?>&qtt=1"><button class="dropbtn">cliquant ici</button></a></p><?php   
-                    echo "<br><p class=\"marginlft\">rappel de la période que vous avez selectionné : ". $debut ." au ". $fin . "</p>";             
+                    echo "Pour valider votre commande, veuillez procéder au payement en ";
+                    ?><a href="index.php?page=indexpanier&id=<?php echo $idBorne; ?>&qtt=1"><button class="dropbtn">cliquant ici</button></a><?php   
+                    echo "<br>rappel de la période que vous avez selectionné : ". $debut ." au ". $fin;             
                 }
                 else
                 {
@@ -128,7 +121,6 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin'], $_SESSION['login']))
         echo "Veuillez selectionner une date correcte";
     }
 }
-
             ?>
 
             </div>
