@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 04 sep. 2020 à 16:54
+-- Généré le :  jeu. 28 jan. 2021 à 08:29
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP :  7.4.1
 
@@ -52,10 +52,43 @@ INSERT INTO `commentaire` (`id`, `id_client`, `commentaire`, `date_com`) VALUES
 CREATE TABLE `facture` (
   `id` int(11) NOT NULL,
   `idResa` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  `total` float NOT NULL,
+  `dateResa` datetime NOT NULL,
+  `totalHT` float NOT NULL,
+  `totalTTC` float NOT NULL,
   `solde` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `facture`
+--
+
+INSERT INTO `facture` (`id`, `idResa`, `dateResa`, `totalHT`, `totalTTC`, `solde`) VALUES
+(1, 1, '2020-09-23 13:17:00', 129.99, 149.99, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `maintenance`
+--
+
+CREATE TABLE `maintenance` (
+  `id` int(11) NOT NULL,
+  `id_borne` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Etat` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `maintenance`
+--
+
+INSERT INTO `maintenance` (`id`, `id_borne`, `Name`, `Etat`) VALUES
+(1, 17, 'Borne anniversaire', 'maintenance'),
+(2, 3, 'Borne basic bleu', 'disponible'),
+(3, 6, 'Borne basic jaune', 'maintenance'),
+(4, 4, 'borne basic rose', 'disponible'),
+(5, 16, 'Borne personnalisable ', 'disponible'),
+(6, 18, 'borne pour entreprise', 'maintenance');
 
 -- --------------------------------------------------------
 
@@ -71,30 +104,32 @@ CREATE TABLE `products` (
   `quantité` int(11) NOT NULL,
   `codepromo` varchar(15) NOT NULL DEFAULT 'promo-2020',
   `lienimage` varchar(1000) NOT NULL,
-  `categorie` varchar(25) NOT NULL
+  `categorie` varchar(25) NOT NULL,
+  `etat` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantité`, `codepromo`, `lienimage`, `categorie`) VALUES
-(1, 'Borne noir', 'La borne noire qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/born2.png', 'borne'),
-(2, 'Borne rouge', 'La borne rouge qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/360x360-rose.png', 'borne'),
-(3, 'Borne basic bleu', 'La borne bleue qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornbleu.png', 'borne'),
-(4, 'borne basic rose', 'La borne rose qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornviolet.png', 'borne'),
-(5, 'Bornes basic blanche', 'La borne blanche qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornblanche.png', 'borne'),
-(6, 'Borne basic jaune', 'La borne jaune qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornjaune.png', 'borne'),
-(9, 'Lot de 200 photos', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10 ou 12.7x12.7.', 29.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/IMPRESSIONPHOTOACCEUIL.png', 'impression'),
-(10, 'Lot de 400 photos', 'Choptaphoto vous propose ce pack photos de 400 pièces, en dimension 10x10 ou 12.7x12.7.', 59.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo.jpg', 'impression'),
-(11, 'photos en illimité', 'Choptaphoto vous propose ce pack photos illimité, en dimension 10x10 ou 12.7x12.7.', 149.99, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo4.jpg', 'impression'),
-(12, 'Premium format 10', 'Choptaphoto vous propose ce type de format photos en dimension 10x10 ou 12.7x12.7.', 0.7, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo5.jpg', 'impression'),
-(13, 'Premium format 13', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10.', 1, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression-photo.png', 'impression'),
-(14, 'Format rétro', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 9.2×10.2 cm.', 1.5, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/impression%20photo6.jpg', 'impression'),
-(16, 'Borne personnalisable ', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un evénement ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornreseaux.png', 'borne'),
-(17, 'Borne anniversaire', 'Cette borne anniversaire qu\'on vous propose est une borne premium, elle est destinée aux particuliers qui souhaitent fêter leur jour d\'anniversaire et garder des milliers de souvenirs avec leurs invités ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornannivsilv.png', 'borne'),
-(18, 'borne pour entreprise', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un événement ! elle est personnalisable de la tête au pied !', 199.99, 1, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/bornefficom.png', 'borne'),
-(20, 'Poster', 'choisissez votre image au payement', 10, 10000, 'promo-2020', 'http://localhost/GITChopTaPhoto/img/posterr.png', 'impression');
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `quantité`, `codepromo`, `lienimage`, `categorie`, `etat`) VALUES
+(1, 'Borne noir', 'La borne noire qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/born2.png', 'borne', NULL),
+(2, 'Borne rouge', 'La borne rouge qu\'on vous propose est une borne premium, elle se confond avec votre chez vous et reste très discrète mais attire tous vos invités. Choptaphoto vous propose deux coloris : un rouge éclatant pour un mariage ou une fête d\'anniversaire ou ce noir pour les séminaires ou des portes ouvertes.', 149.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/360x360-rose.png', 'borne', NULL),
+(3, 'Borne basic bleu', 'La borne bleue qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornbleu.png', 'borne', NULL),
+(4, 'borne basic rose', 'La borne rose qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornviolet.png', 'borne', NULL),
+(5, 'Bornes basic blanche', 'La borne blanche qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornblanche.png', 'borne', NULL),
+(6, 'Borne basic jaune', 'La borne jaune qu\'on vous propose attire tous vos invités avec sa couleur pétante. Choptaphoto vous propose quatre colories : une borne rose, jaune ou bleu éclatante pour un mariage ou une fête d\'anniversaire ou un blanc cassé pour des événements plus professionnels comme un séminaire ou des portes ouvertes !', 99.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornjaune.png', 'borne', NULL),
+(9, 'Lot de 200 photos', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10 ou 12.7x12.7.', 29.99, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/IMPRESSIONPHOTOACCEUIL.png', 'impression', NULL),
+(10, 'Lot de 400 photos', 'Choptaphoto vous propose ce pack photos de 400 pièces, en dimension 10x10 ou 12.7x12.7.', 59.99, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/impression%20photo.jpg', 'impression', NULL),
+(11, 'photos en illimité', 'Choptaphoto vous propose ce pack photos illimité, en dimension 10x10 ou 12.7x12.7.', 149.99, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/impression%20photo4.jpg', 'impression', NULL),
+(12, 'Premium format 10', 'Choptaphoto vous propose ce type de format photos en dimension 10x10 ou 12.7x12.7.', 0.7, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/impression%20photo5.jpg', 'impression', NULL),
+(13, 'Premium format 13', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 10x10.', 1, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/impression-photo.png', 'impression', NULL),
+(14, 'Format rétro', 'Choptaphoto vous propose ce pack photos de 200 pièces, en dimension 9.2×10.2 cm.', 1.5, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/impression%20photo6.jpg', 'impression', NULL),
+(16, 'Borne personnalisable ', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un evénement ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornreseaux.png', 'borne', NULL),
+(17, 'Borne anniversaire', 'Cette borne anniversaire qu\'on vous propose est une borne premium, elle est destinée aux particuliers qui souhaitent fêter leur jour d\'anniversaire et garder des milliers de souvenirs avec leurs invités ! elle est personnalisable de la tete au pied !', 199.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornannivsilv.png', 'borne', NULL),
+(18, 'borne pour entreprise', 'Cette borne personnalisable qu\'on vous propose est une borne premium, elle est destinée aux entreprises qui souhaitent mettre le logo pendant un événement ! elle est personnalisable de la tête au pied !', 199.99, 1, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/bornefficom.png', 'borne', NULL),
+(20, 'Poster', 'choisissez votre image au payement', 10, 10000, 'promo-2020', 'http://localhost/1-efficom/CHOPTAPHOTO/img/posterr.png', 'impression', NULL),
+(30, 'borne test', 'test', 10, 1, 'promo-2020', '', 'borne', 'maintenance');
 
 -- --------------------------------------------------------
 
@@ -115,7 +150,9 @@ CREATE TABLE `reservation` (
 --
 
 INSERT INTO `reservation` (`id`, `idBorne`, `idClient`, `debut`, `fin`) VALUES
-(1, 5, 24, '2020-09-10', '2020-09-15');
+(1, 5, 24, '2020-09-10', '2020-09-15'),
+(3, 2, 21, '2021-01-15', '2021-01-17'),
+(4, 1, 21, '2021-02-05', '2021-02-07');
 
 -- --------------------------------------------------------
 
@@ -141,7 +178,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `age`, `adresse`, `ville`, `login`, `passwd`, `role`, `civilité`) VALUES
-(21, 'MAHIEU', 'Silvère', '2000-01-01', '20 Allée des bonnes notes', 'Wervicq-sud', 'chop@admin.fr', '32ff9ee7e841b26a966870c144fdcaec', 'administrateur', ''),
+(21, 'MAHIEU', 'Silvère', '2000-01-01', '20 Allée des bonnes notes', 'Wervicq-sud', 'chop@admin.fr', '21232f297a57a5a743894a0e4a801fc3', 'administrateur', ''),
 (24, 'VANDERPLANCKE', 'Benoît', '2000-01-01', '20 Allée des bonnes notes', 'Wervicq-sud', 'chop@client.fr', '62608e08adc29a8d6dbc9754e659f125', 'client', '');
 
 --
@@ -164,10 +201,19 @@ ALTER TABLE `facture`
   ADD KEY `idResa` (`idResa`);
 
 --
+-- Index pour la table `maintenance`
+--
+ALTER TABLE `maintenance`
+  ADD PRIMARY KEY (`id`,`id_borne`),
+  ADD KEY `Name` (`Name`),
+  ADD KEY `id_borne` (`id_borne`);
+
+--
 -- Index pour la table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `name` (`name`);
 
 --
 -- Index pour la table `reservation`
@@ -200,25 +246,31 @@ ALTER TABLE `commentaire`
 -- AUTO_INCREMENT pour la table `facture`
 --
 ALTER TABLE `facture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `maintenance`
+--
+ALTER TABLE `maintenance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- Contraintes pour les tables déchargées
@@ -235,6 +287,13 @@ ALTER TABLE `commentaire`
 --
 ALTER TABLE `facture`
   ADD CONSTRAINT `facture_ibfk_1` FOREIGN KEY (`idResa`) REFERENCES `reservation` (`id`);
+
+--
+-- Contraintes pour la table `maintenance`
+--
+ALTER TABLE `maintenance`
+  ADD CONSTRAINT `maintenance_ibfk_2` FOREIGN KEY (`Name`) REFERENCES `products` (`name`),
+  ADD CONSTRAINT `maintenance_ibfk_3` FOREIGN KEY (`id_borne`) REFERENCES `products` (`id`);
 
 --
 -- Contraintes pour la table `reservation`
