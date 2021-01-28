@@ -65,7 +65,11 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
     $idBorne = $_GET['idBorne'];
     $debut = $_POST['debut'];
     $fin = $_POST['fin'];
-    $idClient = $_SESSION['id'];
+    $log = addslashes($_SESSION['login']);
+    $req = "SELECT id  FROM users WHERE login LIKE (\"$log\") ";
+    $ORes = $bdd->query($req);
+    $usr = $ORes->fetch();
+    $idClient = $usr->id;
 
     if (strtotime($debut) <= strtotime($fin) && strtotime($debut) > time())
     {
@@ -90,7 +94,7 @@ if (isset($_GET['idBorne'], $_POST['debut'], $_POST['fin']))
                 if(verifDispo($bdd, $idBorne, $debut, $fin) == 0)
                 {
                     $tab = array($idBorne,$idClient,$debut, $fin);
-                    $req = "INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, $debut, $fin)";
+                    $req = "INSERT INTO reservation (id, idBorne, idClient, debut, fin) VALUES (NULL, $idBorne, $idClient, '$debut', '$fin')";
                     $ORes = $bdd->prepare($req);
                     $ORes->execute($tab);
                     echo "Pour valider votre commande, veuillez procéder au payement en ";
