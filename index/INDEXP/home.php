@@ -152,10 +152,10 @@
     //         <ul class="grid-testimonials">
     //             <li>
     //                 <div>
-    //                     <p><?php echo $info->commentaire; ?></p><span class="quote-arrow"></span>
+    //                     <p><?php// echo $info->commentaire; ?></p><span class="quote-arrow"></span>
     //                 </div>
-    //                 <span class="grid-testimonials-citation"><?php echo $info->nom . $info->prénom; ?></span>
-    //                 <span class="grid-testimonials-citation"><?php echo $info->date_com; ?></span>
+    //                 <span class="grid-testimonials-citation"><?php// echo $info->nom . $info->prénom; ?></span>
+    //                 <span class="grid-testimonials-citation"><?php// echo $info->date_com; ?></span>
     //             </li>
     //         </ul>
     //     </div>
