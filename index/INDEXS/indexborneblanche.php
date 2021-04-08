@@ -87,7 +87,7 @@
     </div>
     <div class="container2">
         <p><strong>Retour gratuit</strong> en agence</p>
-        <p><strong>Livraison</strong> gratuite**</p>
+        <p><strong>Livraison</strong> gratuite</p>
         <p><strong>Mes achats</strong> remboursés</p>
         <p><strong>Nos Bornes</strong> prenium</p>
     </div>
