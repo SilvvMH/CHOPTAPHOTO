@@ -178,7 +178,7 @@
         <p>
             <h2 id="entreprise" class="titretextconnect">VOUS ETES UN ENTREPRENEUR ?<br>VOUS VOULLEZ FAIRE VOTRE PUB ?<br>CETTE BORNES ATTIRE LES LIKES ET LES PARTAGES !</h2>
             <br> Equipée de son domino 4G/3G ou de votre connexion Wifi,
-            <br> on ne peut plus l’arrêter ! les utilisateurs verront votre marque en GARND !
+            <br> on ne peut plus l’arrêter ! les utilisateurs verront votre marque en GRAND !
             <br>Les galeries souvenirs sont créées automatiquement et instantanément
             <br> également sur le site DROPTAPHOTO que vous pourrez aller voir avec votre code évenement.
             <br>Vos invités sont encore dans votre événement que les photos sont déjà sur votre compte sur notre site.</p>
