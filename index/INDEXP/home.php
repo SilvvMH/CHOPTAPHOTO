@@ -152,10 +152,10 @@
     //         <ul class="grid-testimonials">
     //             <li>
     //                 <div>
-    //                     <p><?php echo $info->commentaire; ?></p><span class="quote-arrow"></span>
+    //                     <p><?php// echo $info->commentaire; ?></p><span class="quote-arrow"></span>
     //                 </div>
-    //                 <span class="grid-testimonials-citation"><?php echo $info->nom . $info->prénom; ?></span>
-    //                 <span class="grid-testimonials-citation"><?php echo $info->date_com; ?></span>
+    //                 <span class="grid-testimonials-citation"><?php// echo $info->nom . $info->prénom; ?></span>
+    //                 <span class="grid-testimonials-citation"><?php// echo $info->date_com; ?></span>
     //             </li>
     //         </ul>
     //     </div>
@@ -182,7 +182,7 @@
 </div>
 <div class="container11">
     <p><strong>Retour gratuit</strong> en agence</p>
-    <p><strong>Livraison</strong> gratuite**</p>
+    <p><strong>Livraison</strong> gratuite</p>
     <p><strong>Mes achats</strong> remboursés</p>
     <p><strong>Nos Bornes</strong> prenium</p>
 </div>
