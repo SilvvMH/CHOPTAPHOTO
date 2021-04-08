@@ -3,9 +3,12 @@ body {
 	overflow-x: hidden;
 }
 .backgroundhautdusite {
-	background-image: url("../img/FOND-NOIR-PENCHE.png");
-	margin-top: -20px;
-}
+    margin-top: -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/FOND-NOIR-PENCHE.png");
+  }
+  
 
 /**image bas du site penchée**/
 
