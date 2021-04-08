@@ -17,7 +17,7 @@
         <label for="cardCVC">Cryptogramme</label>
         <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
         <br>
-        <button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Confirmez le paiement</button>
+        <button class="blueButton" style="float:right;border-radius: 15px;" type="submit"><a href="">Confirmez le paiement</a></button>
         <!-- <script type="text/javascript">
             alert('Compte déjà existant');
             document.location.href = 'index.php?page=inscription';

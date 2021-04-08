@@ -3,12 +3,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
-<!-------------background haut du site------------>
-<div class="backgroundhautdusite">
-    <img src="img/FOND-NOIR-PENCHE.png">
-</div>
-<!-------------background haut du site------------>
-
 <!-------------------carousel bornes couleurs basic en vente-------------------->
 <div class="carousel2 flex-mob-col">
     <a href="index.php?page=indexbornesvisiteur"><img class="imageredirection" src="img/BORNESACCEUIL.png"></a>

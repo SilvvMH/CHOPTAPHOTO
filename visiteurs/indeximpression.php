@@ -3,13 +3,6 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <!-- script -->
 
-
-<!-------------background haut du site------------>
-<div class="backgroundhautdusite">
-    <img src="img/FOND-NOIR-PENCHE.png">
-</div>
-<!-------------background haut du site------------>
-
 <!------------carousel impressions photos----------------->
 <h2 class="lesplusvendus">Les souvenirs a ce prix là ?</h2>
 <h2 class="lesplusvendusbas">Crée ton album !<br></h2>

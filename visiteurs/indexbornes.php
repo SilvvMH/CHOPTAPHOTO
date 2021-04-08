@@ -4,12 +4,6 @@
 <!--script-->
 
 
-<!-------------background haut du site------------>
-<div class="backgroundhautdusite">
-    <img src="img/FOND-NOIR-PENCHE.png">
-</div>
-<!-------------background haut du site------------>
-
 <!-----------------borne rouge et noir-------------->
 <h2 class="titrebornepersonnalisable2">Les plus simples,</h2>
 <h2 class="titrebornepersonnalisable">Mais les plus demandées !</h2>

@@ -43,5 +43,6 @@
 
 	<!-------------background haut du site------------>
 	<div class="backgroundhautdusite">
+	    <img src="img/FOND-NOIR-PENCHE.png">
 	</div>
 	<!-------------background haut du site------------>
