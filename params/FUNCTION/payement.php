@@ -18,7 +18,11 @@
         <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
         <br>
         <button class="blueButton" style="float:right;border-radius: 15px;" type="submit">Confirmez le paiement</button>
-        <p>&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+        <!-- <script type="text/javascript">
+            alert('Compte déjà existant');
+            document.location.href = 'index.php?page=inscription';
+        </script> -->
+        <p><br><br><br><br><br><br></p>
         <br><br>
 </form>
 
