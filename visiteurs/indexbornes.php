@@ -170,40 +170,51 @@
 
 <br>
 
-<!---------------------texte 4g et connetivité de la borne--------------------->
-<div class="texteconnectivite">
-    <p>
-    <h2 id="entreprise" class="titretextconnect">VOUS ETES UN ENTREPRENEUR ?<br>VOUS VOULLEZ FAIRE VOTRE PUB ?<br>CETTE BORNES ATTIRE LES LIKES ET LES PARTAGES !</h2>
-    <br> Equipée de son domino 4G/3G ou de votre connexion Wifi,
-    <br> on ne peut plus l’arrêter ! les utilisateurs verront votre marque en GARND !
-    <br>Les galeries souvenirs sont créées automatiquement et instantanément
-    <br> également sur le site DROPTAPHOTO que vous pourrez aller voir avec votre code évenement.
-    <br>Vos invités sont encore dans votre événement que les photos sont déjà sur votre compte sur notre site.</p>
-    <br>
-</div>
-<!------------------------texte 4g et connetivité de la borne---------------->
-
-<!----------------------image borne 2-------------------->
-<div class="container2borne flex-mob-col" id="container2">
-    <div class="presentationimage2borne"><img src="img/bornefficom.png"></div>
-    <div class="presentationtext2borne">
-        <h2 class="titreborne">LA BORNE POUR TON ENTREPRISE ! <span class="badge badge-secondary">Basique</span></h2>L'école EFFICOM à Lille nous a fait confiance.
-        <br> Nous lui avons fourni une borne à leur image avec leur logo,
-        <br>les élèves l'ont adorée et ont tous reçu leur photo par la suite.
+<<<<<<< HEAD <!---------------------texte 4g et connetivité de la borne--------------------->
+    <div class="texteconnectivite">
+        <p>
+        <h2 id="entreprise" class="titretextconnect">VOUS ETES UN ENTREPRENEUR ?<br>VOUS VOULLEZ FAIRE VOTRE PUB ?<br>CETTE BORNES ATTIRE LES LIKES ET LES PARTAGES !</h2>
+        <br> Equipée de son domino 4G/3G ou de votre connexion Wifi,
+        <br> on ne peut plus l’arrêter ! les utilisateurs verront votre marque en GARND !
+        <br>Les galeries souvenirs sont créées automatiquement et instantanément
+        <br> également sur le site DROPTAPHOTO que vous pourrez aller voir avec votre code évenement.
+        <br>Vos invités sont encore dans votre événement que les photos sont déjà sur votre compte sur notre site.</p>
         <br>
-        <br>
-        <a href="index.php?page=connexion">
-            <button type="button" class="btn btn-primary btn-lg">Personnaliser votre borne
-                <br>dès maintenant !</button>
-        </a>
     </div>
-</div>
-<!-----------------------image borne 2------------------->
+    <!------------------------texte 4g et connetivité de la borne---------------->
 
-<br>
-<br>
+    <!----------------------image borne 2-------------------->
+    <div class="container2borne flex-mob-col" id="container2">
+        <div class="presentationimage2borne"><img src="img/bornefficom.png"></div>
+        <div class="presentationtext2borne">
+            <h2 class="titreborne">LA BORNE POUR TON ENTREPRISE ! <span class="badge badge-secondary">Basique</span></h2>L'école EFFICOM à Lille nous a fait confiance.
+            <br> Nous lui avons fourni une borne à leur image avec leur logo,
+            <br>les élèves l'ont adorée et ont tous reçu leur photo par la suite.
+            =======
+            <!---------------------texte 4g et connetivité de la borne--------------------->
+            <div class="texteconnectivite">
+                <p>
+                <h2 id="entreprise" class="titretextconnect">VOUS ETES UN ENTREPRENEUR ?<br>VOUS VOULLEZ FAIRE VOTRE PUB ?<br>CETTE BORNES ATTIRE LES LIKES ET LES PARTAGES !</h2>
+                <br> Equipée de son domino 4G/3G ou de votre connexion Wifi,
+                <br> on ne peut plus l’arrêter ! les utilisateurs verront votre marque en GRAND !
+                <br>Les galeries souvenirs sont créées automatiquement et instantanément
+                <br> également sur le site DROPTAPHOTO que vous pourrez aller voir avec votre code évenement.
+                <br>Vos invités sont encore dans votre événement que les photos sont déjà sur votre compte sur notre site.</p>
+                >>>>>>> e93cca378080e49d7eec2df3d1b078f9db07f770
+                <br>
+                <br>
+                <a href="index.php?page=connexion">
+                    <button type="button" class="btn btn-primary btn-lg">Personnaliser votre borne
+                        <br>dès maintenant !</button>
+                </a>
+            </div>
+        </div>
+        <!-----------------------image borne 2------------------->
+
+        <br>
+        <br>
 
 
-</body>
+        </body>
 
-</html>
+        </html>

@@ -55,7 +55,7 @@
     <div class="presentationtextreseaux">
         <h2 class="titre">PERSONNALISABLE DE A à Z <span class="badge badge-secondary"> Nouveau</span><br> </h2>Tu veux que tes amis, visiteurs ou abonnés
         <br> voient tout tes réseaux et au passage faire ta PUB
-        <br> pour tout tes réseaux en 1 seul événement.
+        <br> pour tous tes réseaux en 1 seul événement.
         <br> C'est maintenant possible avec la borne réseaux
         <br> personnalisable de SNAP à TWITTER en passant par INSTA et FACEBOOK !
         <!--BR-->
