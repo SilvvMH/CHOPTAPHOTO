@@ -26,7 +26,7 @@
 <div class="container1 flex-mob-col">
     <div class="presentationimage"><img src="img/born.png"></div>
     <div class="presentationtext">
-        <h2 class="titre">ELÉGANTE ET SEXY <span class="badge badge-secondary"> New</span><br> </h2>Difficile de résister à ses formes voluptueuses, <br>elle ne laisse pas indifférent et tout le monde ne peut s'empêcher de lui sourire.<br>
+        <h2 class="titre">ÉLÉGANTE ET SEXY <span class="badge badge-secondary"> Nouveau</span><br> </h2>Difficile de résister à ses formes voluptueuses, <br>elle ne laisse pas indifférent et tout le monde ne peut s'empêcher de lui sourire.<br>
 
         Elle est l'amie de tous : sa simplicité d'utilisation,<br> sa solidité des matériaux et la fiabilité du matériel<br> sont autant de qualités qui lui sont appréciées.<br>Disponnible pour tout type d'événement.<BR>
 
@@ -58,7 +58,7 @@
 <!-------------borne sobre et attirante----------->
 <div class="container2 flex-mob-col">
     <div class="presentationtext2">
-        <h2 class="titre">SOBRE ET ATTIRANTE <span class="badge badge-secondary"> Basic</span></h2>Son charme et sa sobriété sont l'une des qualités de cette borne.<br>
+        <h2 class="titre">SOBRE ET ATTIRANTE <span class="badge badge-secondary"> Basique</span></h2>Son charme et sa sobriété sont l'une des qualités de cette borne.<br>
 
         Elle est belle est discrète : sa simplicité d'utilisation,<br> sa solidité des matériaux et la fiabilité du matériel<br> sont autant de qualités qui lui sont appréciées.<br>
 
