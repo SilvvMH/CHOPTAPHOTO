@@ -1,55 +1,45 @@
 <?php
 
-require("params\BDD\bdd.php");
+require("params/BDD/bdd.php");
 
-        if(isset($_POST["login"],$_POST["password"]))
-            {
-                $log = addslashes($_POST["login"]);
-                $req = "SELECT passwd, id, role FROM users WHERE login LIKE (\"$log\") ";
-                $Ores = $bdd->query($req);
-                if($usr = $Ores->fetch())
-                    {
-                        $passwd = md5($_POST["password"]);
-                        if($passwd == $usr->passwd)
-                            {
-                                $_SESSION["login"] = $log;
-                            }
-                        else
-                            {
-                                ?>
-                                <div style="display: flex;align-items: center;">
-                                    <p style="border: 1px solid black;background-color: red;padding: 5px;border-radius:25px ;" ><strong>Attention !</strong> Mot de passe incorrecte.</p>
-                                </div>
-                                <?php
-                            }
-                    }
-            }
-
-            if(isset($_POST['password']))
-            {
-                $password = $_POST["password"];
-                if($password == "admin-admin")
-                {
-                    $req = $bdd->prepare("UPDATE users SET role = \"administrateur\" WHERE login LIKE (\"$log\") ");
-                    $req->execute(array($_SESSION["login"]));
-                }
-            }
-
-
-if(isset($_SESSION['login']))
-    {
-        ?>
-            <script type="text/javascript">
-                alert('Bienvenue, vous allez être redirigé vers le catalogue pour faire vos achats');
-                document.location.href = 'index.php';
-            </script>;
-        <?php
-    }
-else
-    {
+if (isset($_POST["login"], $_POST["password"])) {
+    $log = addslashes($_POST["login"]);
+    $req = "SELECT passwd, id, role FROM users WHERE login LIKE (\"$log\") ";
+    $Ores = $bdd->query($req);
+    if ($usr = $Ores->fetch()) {
+        $passwd = md5($_POST["password"]);
+        if ($passwd == $usr->passwd) {
+            $_SESSION["login"] = $log;
+        } else {
 ?>
-<!-- formulaire -->
-<div class="background">
+            <div style="display: flex;align-items: center;">
+                <p style="border: 1px solid black;background-color: red;padding: 5px;border-radius:25px ;"><strong>Attention !</strong> Mot de passe incorrecte.</p>
+            </div>
+    <?php
+        }
+    }
+}
+
+if (isset($_POST['password'])) {
+    $password = $_POST["password"];
+    if ($password == "admin-admin") {
+        $req = $bdd->prepare("UPDATE users SET role = \"administrateur\" WHERE login LIKE (\"$log\") ");
+        $req->execute(array($_SESSION["login"]));
+    }
+}
+
+
+if (isset($_SESSION['login'])) {
+    ?>
+    <script type="text/javascript">
+        alert('Bienvenue, vous allez être redirigé vers le catalogue pour faire vos achats');
+        document.location.href = 'index.php';
+    </script>;
+<?php
+} else {
+?>
+    <!-- formulaire -->
+    <div class="background">
         <div class="container">
             <br>
             <h2 class="form-group">Connexion :</h2>
@@ -75,5 +65,5 @@ else
     <br>
 
 <?php
-            }
+}
 ?>

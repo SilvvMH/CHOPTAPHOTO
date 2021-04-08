@@ -1,5 +1,5 @@
 <?php
-require("params\BDD\bdd.php");
+require("params/BDD/bdd.php");
 
 if(count($_POST))
 {

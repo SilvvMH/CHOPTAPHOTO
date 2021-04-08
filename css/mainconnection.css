@@ -1,74 +1,75 @@
 /******************Body********************/
 
-html, body {
-    overflow-x : hidden;
-    width:100%;
-    height:100%;
-    text-align: center;
-    position:relative;
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
 }
 
 .container {
-    width: 50%;
-    align-items: center;
+  width: 50%;
+  align-items: center;
 }
 
 .container input {
-    justify-content: space-around;
-    text-align: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .form-group {
-    align-items: center;
+  align-items: center;
 }
 .form-control {
-    width: 100%;
-    align-items: center;
+  width: 100%;
+  align-items: center;
 }
 
 .backgroundhautdusite {
-    margin-top : -20px;
-    background-size: cover;
-    background: no-repeat;
-    background-image : url("../img/FOND-NOIR-PENCHE.png");
+  margin-top: -20px;
+  background-size: cover;
+  background: no-repeat;
+  background-image: url("../img/FOND-NOIR-PENCHE.png");
 }
 
 /**image bas du site penchée**/
 
 .backgroundbasdusite {
-    display : flex;
-    margin-top : 60px;
-    margin-bottom : -5px;
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: -5px;
 }
 
 /**image bas du site penchée**/
 
 a:hover {
-    text-decoration : none;
-    color : rgb(0,0,0);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 a {
-    color : rgb(0,0,0);
+  color: rgb(0, 0, 0);
 }
 
 /******************Body********************/
 /*****************Alert********************/
 
 .alert {
-    padding : 1px;
-    border : 0;
-    border-radius : 0;
-    font-size : 15px;
-    color : rgb(255,255,255);
-    background : rgba(195,71,139,1.00);
+  padding: 1px;
+  border: 0;
+  border-radius: 0;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  background: rgba(195, 71, 139, 1);
 }
 
 .containeralert {
-    display : flex;
-    justify-content : space-around;
-    margin-top : 10px;
-    font-weight : 400;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
 /*****************Alert********************/
@@ -76,61 +77,61 @@ a {
 /****************Nav-bar banner******************/
 
 .navbar {
-    display : flex;
-    justify-content : space-between;
-    width : 100%;
-    margin-top : -20px;
-    border-radius : 0;
-    font-size : 20px;
-    line-height : 50px;
-    background : rgb(0,0,0);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -20px;
+  border-radius: 0;
+  font-size: 20px;
+  line-height: 50px;
+  background: rgb(0, 0, 0);
 }
 
 .navbar img {
-    width : 100%;
-    height : 70px;
-    max-width : 300px;
+  width: 100%;
+  height: 70px;
+  max-width: 300px;
 }
 
 .navbar a:hover svg {
-    animation : bounce 0.7s ease infinite;
+  animation: bounce 0.7s ease infinite;
 }
 
 @keyframes bounce {
-    from {
-        transform : translateY(1px);
-    }
+  from {
+    transform: translateY(1px);
+  }
 
-    to {
-        transform : translateY(-2.5px);
-    }
+  to {
+    transform: translateY(-2.5px);
+  }
 }
 
 .left {
-    margin-top : 10px;
-    margin-left : 0;
+  margin-top: 10px;
+  margin-left: 0;
 }
 
 .color {
-    padding : 10px;
-    color : rgb(255,255,255);
+  padding: 10px;
+  color: rgb(255, 255, 255);
 }
 
 .color:hover {
-    color : rgba(255,0,187,1.00);
-    transition : 0.7s;
+  color: rgba(255, 0, 187, 1);
+  transition: 0.7s;
 }
 
 .right {
-    margin-top : 10px;
-    margin-right : 10px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .right img {
-    width : 100%;
-    height : 20px;
-    margin : 14px;
-    max-width : 20px;
+  width: 100%;
+  height: 20px;
+  margin: 14px;
+  max-width: 20px;
 }
 
 /****************Nav-bar banner******************/
@@ -138,36 +139,36 @@ a {
 /********************container********************/
 
 .container3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .container4 {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .iconsresseaux {
-    margin-left: 20px;
-    font-size: 40px;
+  margin-left: 20px;
+  font-size: 40px;
 }
 
 .icons {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .icons2 {
-    margin-left: 40px;
-    font-size: 60px;
-    color: rgba(255,0,187,1.00);
+  margin-left: 40px;
+  font-size: 60px;
+  color: rgba(255, 0, 187, 1);
 }
 
 .textbannerpanier {
-    margin-top: 19px;
-    margin-left: 10px;
-    font-size: 16px;
+  margin-top: 19px;
+  margin-left: 10px;
+  font-size: 16px;
 }
 
 /********************container********************/
@@ -175,73 +176,72 @@ a {
 /**********bouton contact**********/
 
 .bouton {
-    margin-top: 25px;
-    margin-left: 900px;
+  margin-top: 25px;
+  margin-left: 900px;
 }
 
 /**********bouton contact**********/
 
-
 /**************************bouton en bas du site*****************************/
 
 .boutondubas {
-    display : flex;
-    color : rgb(255,255,255);
-    background : rgb(0,0,0);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }
 
 .rights {
-    display : flex;
-    justify-content : space-around;
-    padding-top : 10px;
-    padding-bottom : 10px;
-    color : rgb(255,255,255);
-    background : rgb(0,0,0);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }
 
-
 .titreboutonbasdusite {
-    font-family : 'Yanone Kaffeesatz',sans-serif;
-    font-size : 23px;
-    color : rgba(195,71,139,1.00);
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 23px;
+  color: rgba(195, 71, 139, 1);
 }
 
 .footerfont {
-    font-size : 15px;
-    color : rgb(255,255,255);
+  font-size: 15px;
+  color: rgb(255, 255, 255);
 }
 
 .footerfont:hover {
-    color : rgb(255,192,203);
+  color: rgb(255, 192, 203);
 }
 
 .boutondubas aaaa:hover {
-    font-size : 13px;
-    color : rgb(255,192,203);
+  font-size: 13px;
+  color: rgb(255, 192, 203);
 }
 
 .titreboutondubas svg {
-    color : rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
 .boutondubas a:hover svg {
-    transform : scale(1.15);
+  transform: scale(1.15);
 }
 
 .iconsresseaux {
-    margin-left : 20px;
-    font-size : 17px;
+  margin-left: 20px;
+  font-size: 17px;
 }
 
 .Apropos {
-    font-size : 20px;
-    color : rgba(195,71,139,1.00);
+  font-size: 20px;
+  color: rgba(195, 71, 139, 1);
 }
 
 .ico {
-    color : rgb(255,0,0);
+  color: rgb(255, 0, 0);
 }
 
 /**************************bouton en bas du site*****************************/
-
-  

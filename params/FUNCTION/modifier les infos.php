@@ -1,6 +1,5 @@
 <?php
-require("params\BDD\bdd.php");
-
+require("params/BDD/bdd.php");
 
 if (isset($_SESSION['login']))
 {
