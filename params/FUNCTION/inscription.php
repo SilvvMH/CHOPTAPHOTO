@@ -69,7 +69,7 @@ if (count($_POST)) {
                 </div>
                 <div class="form-group">
                     <label for="adresse">vous etes né le :</label>
-                    <input type="text" class="form-control" placeholder="2000-07-06" name="age">
+                    <input type="date" class="form-control" placeholder="2000-07-06" name="age">
                 </div>
                 <div class="form-group">
                     <label for="email">Votre e-mail:</label>

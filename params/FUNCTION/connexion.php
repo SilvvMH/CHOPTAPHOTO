@@ -32,7 +32,6 @@ if (isset($_POST['password'])) {
 if (isset($_SESSION['login'])) {
     ?>
     <script type="text/javascript">
-        alert('Bienvenue, vous allez être redirigé vers le catalogue pour faire vos achats');
         document.location.href = 'index.php';
     </script>;
 <?php

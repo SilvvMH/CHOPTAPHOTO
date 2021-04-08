@@ -139,29 +139,30 @@
 
 
 <!-- commentaire -->
-<div class="comments">
+<!-- <div class="comments">
 
     <?php
-    $req = "SELECT commentaire.*, users.nom, users.prenom FROM commentaire JOIN users ON users.id = commentaire.id_client"; // PREPARATION DE LA REQUETE
-    $Ores = $bdd->query($req); // EXECUTION ET RECUPERATION DE TOUS LES RESULTATS / LIGNES
-    while ($info = $Ores->fetch()) // BUOCLE POUR PARCOURIR LIGNE PAR LIGNE
-    {
+    // $req = "SELECT commentaire.*, users.nom, users.prenom FROM commentaire JOIN users ON users.id = commentaire.id_client"; // PREPARATION DE LA REQUETE
+    // $Ores = $bdd->query($req); // EXECUTION ET RECUPERATION DE TOUS LES RESULTATS / LIGNES
+    // while ($info = $Ores->fetch()) // BUOCLE POUR PARCOURIR LIGNE PAR LIGNE
+    // {
+    // 
     ?>
-        <div class="avis">
-            <ul class="grid-testimonials">
-                <li>
-                    <div>
-                        <p><?php echo $info->commentaire; ?></p><span class="quote-arrow"></span>
-                    </div>
-                    <span class="grid-testimonials-citation"><?php echo $info->nom . $info->prénom; ?></span>
-                    <span class="grid-testimonials-citation"><?php echo $info->date_com; ?></span>
-                </li>
-            </ul>
-        </div>
+    //     <div class="avis">
+    //         <ul class="grid-testimonials">
+    //             <li>
+    //                 <div>
+    //                     <p><?php echo $info->commentaire; ?></p><span class="quote-arrow"></span>
+    //                 </div>
+    //                 <span class="grid-testimonials-citation"><?php echo $info->nom . $info->prénom; ?></span>
+    //                 <span class="grid-testimonials-citation"><?php echo $info->date_com; ?></span>
+    //             </li>
+    //         </ul>
+    //     </div>
     <?php
-    }
+    // }
     ?>
-</div>
+</div> -->
 
 </div>
 <!-- commentaire -->

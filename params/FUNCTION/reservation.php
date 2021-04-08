@@ -2,7 +2,7 @@
 require("params/BDD/bdd.php");
 ?>
 
-<!-- <head>
+<head>
     <style>
         .image {
             margin: 20px 40px 40px 40px;
@@ -12,7 +12,7 @@ require("params/BDD/bdd.php");
             width: 150px;
         }
     </style>
-</head> -->
+</head>
 
 <?php
 if (isset($_GET['idBorne'])) {
