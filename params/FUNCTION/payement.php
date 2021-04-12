@@ -10,12 +10,9 @@
             </div>
         </div>
         <br>
-        <label for="cardNumber">Numéro de carte</label>
-        <input type="text" size="10" class="form-control" name="cardNumber" placeholder="0000-0000-0000-0000" autocomplete="cc-number" required autofocus />
-        <label for="cardExpir">Date d'expiration</label>
+        <input maxlength="12" size="12" id="input-field" type="text" name="number" placeholder="Numéro de carte" />
         <input type="text" size="5" class="form-control" name="cardExpiry" placeholder="MM / AA" autocomplete="cc-exp" required />
-        <label for="cardCVC">Cryptogramme</label>
-        <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+        <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVV" autocomplete="cc-csc" required />
         <br>
         <button class="blueButton" style="float:right;border-radius: 15px;" type="submit"><a href="">Confirmez le paiement</a></button>
         <!-- <script type="text/javascript">
